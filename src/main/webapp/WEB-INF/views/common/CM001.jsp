@@ -1,16 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hanssak
-  Date: 2020-04-20
-  Time: 오후 3:17
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@ include file="/WEB-INF/views/common/commonHead.jsp"%>
+
 Hello JSP
-</body>
-</html>

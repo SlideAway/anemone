@@ -18,9 +18,19 @@
             <version>2.2.2</version>
         </dependency>
         <dependency>
-            <groupId>org.mortbay.jetty</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5-20081211</version>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-api</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-core</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-request-servlet</artifactId>
+            <version>1.0.7</version>
         </dependency>
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
@@ -28,9 +38,9 @@
             <version>2.5-20081211</version>
         </dependency>
         <dependency>
-            <groupId>org.mortbay.jetty</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5-20081211</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.6</version>
         </dependency>
     </dependencies>
     <packaging>war</packaging>
