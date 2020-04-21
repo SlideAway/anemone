@@ -11,6 +11,10 @@
 <body>
 <div class="wrapper">
     <tiles:insertAttribute name="top"/>
+
+    <section class="content" style="padding: 10px">
+        <tiles:insertAttribute name="contents" />
+    </section>
 </div>
 </body>
 </html>

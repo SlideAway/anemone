@@ -8,4 +8,8 @@
         <put-attribute name="top"       value="/WEB-INF/views/common/commonTop.jsp"/>
         <put-attribute name="left"      value="/MENU_TREE.do"/>
     </definition>
+    <definition name="CM001" extends="DEFAULT">
+        <put-attribute name="contents" value="/WEB-INF/views/common/CM001.jsp"/>
+    </definition>
+
 </tiles-definitions>
