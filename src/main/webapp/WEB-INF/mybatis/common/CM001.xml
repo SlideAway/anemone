@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.mvc.common.dao.CM001Dao">
+    <select id="getNotice" resultType="CM001Dto">
+        select
+    		 a.notice_seq		as	noticeSeq
+	    	,a.title 			as 	title
+		    ,a.content			as	content
+    		,a.reg_date			as	regDate
+	    	,b.user_nickname	as	nickname
+        from tbl_notice_board a
+        left outer join tbl_user_info b on a.reg_user = b.user_seq
+    </select>
+</mapper>

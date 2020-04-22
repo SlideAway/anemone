@@ -1,4 +1,10 @@
 package web.mvc.common.dao;
 
-public class CM001Dao {
+import web.mvc.common.domain.CM001Dto;
+import web.mvc.common.domain.CM001Param;
+
+import java.util.List;
+
+public interface CM001Dao {
+    public List<CM001Dto> getNotice();
 }

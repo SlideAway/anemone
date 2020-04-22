@@ -11,5 +11,8 @@
     <definition name="CM001" extends="DEFAULT">
         <put-attribute name="contents" value="/WEB-INF/views/common/CM001.jsp"/>
     </definition>
+    <definition name="CM002" extends="DEFAULT">
+        <put-attribute name="contents" value="/WEB-INF/views/common/CM002.jsp"/>
+    </definition>
 
 </tiles-definitions>
