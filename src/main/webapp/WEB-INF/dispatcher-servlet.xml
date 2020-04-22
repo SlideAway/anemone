@@ -9,7 +9,7 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
     <mvc:annotation-driven/>
-    <mvc:resources mapping="/resources/**" location="/resources/"/>
+<!--    <mvc:resources mapping="/resources/**" location="WEB-INF/"/>-->
 
     <!--Controller Load-->
     <context:component-scan base-package="web" use-default-filters="false">

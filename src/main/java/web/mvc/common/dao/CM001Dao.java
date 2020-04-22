@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CM001Dao {
     public List<CM001Dto> getNotice();
+    public List<CM001Dto> getFree();
 }

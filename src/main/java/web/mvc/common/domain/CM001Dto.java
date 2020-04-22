@@ -2,11 +2,12 @@ package web.mvc.common.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
 import java.util.List;
 
 
 public class CM001Dto {
-    private long noticeSeq;
+    private long boardSeq;
     private String title;
     private String content;
     private String regDate;
@@ -15,12 +16,12 @@ public class CM001Dto {
     private List<CM001Dto> noticeList;
 
     @JsonSerialize(using = ToStringSerializer.class)
-    public long getNoticeSeq() {
-        return noticeSeq;
+    public long getBoardSeq() {
+        return boardSeq;
     }
 
-    public void setNoticeSeq(long noticeSeq) {
-        this.noticeSeq = noticeSeq;
+    public void setBoardSeq(long boardSeq) {
+        this.boardSeq = boardSeq;
     }
 
     public String getTitle() {
@@ -55,11 +56,11 @@ public class CM001Dto {
         this.nickname = nickname;
     }
 
-    public List<CM001Dto> getNoticeList() {
-        return noticeList;
-    }
-
-    public void setNoticeList(List<CM001Dto> noticeList) {
-        this.noticeList = noticeList;
-    }
+//    public List<CM001Dto> getNoticeList() {
+//        return noticeList;
+//    }
+//
+//    public void setNoticeList(List<CM001Dto> noticeList) {
+//        this.noticeList = noticeList;
+//    }
 }

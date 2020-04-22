@@ -22,7 +22,9 @@ public class CM001Controller {
     @RequestMapping("/CM001.do")
     public String test(Model model) {
         List<CM001Dto> notice = service.getNotice();
+        List<CM001Dto> free = service.getFree();
         model.addAttribute("notice", notice);
+        model.addAttribute("free", free);
         return "CM001";
     }
 }

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/views/common/common.jsp" %>
 
-<script src="../../js/common/commonTop.js"></script>
+<script src="${CR}/resources/weblb/js/common/commonTop.js"></script>
 
 <header class="main-header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/CM003.do">SignUp <span class="sr-only"></span></a>
+                    <a class="nav-link" href="/CM002.do">SignUp <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/CM002.do">SignIn <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/CM003.do">SignIn <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Notice <span class="sr-only">(current)</span></a>

@@ -15,5 +15,9 @@ public class CM001Service {
         List<CM001Dto> result = dao.getNotice();
         return result;
     }
+    public List<CM001Dto> getFree() {
+        List<CM001Dto> result = dao.getFree();
+        return result;
+    }
 
 }
