@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/views/common/common.jsp" %>
 
-<script src="${CR}/resources/weblb/js/common/CM002.js"></script>
+<script src="${CR}/resources/weblb/js/common/CM001.js"></script>
 
 <div class="container-fluid">
     <div class="row">

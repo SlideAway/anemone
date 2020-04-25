@@ -2,8 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="web.mvc.common.dao.CM002Dao">
-<insert id="inserUser">
+    <select id="get" resultType="int">
+        select count(*) from tbl_user_info
+        <where>
+            <if test="userId != null">
+                user_id = #{userId}
+            </if>
+            <if test="nickName != null">
+                user_nickname = #{nickName}
+            </if>
+        </where>
+    </select>
 
-</insert>
+    <select id="getNick" resultType="int">
+        select count(*) from tbl_user_info
+    </select>
+
+
+
+    <insert id="save">
+
+    </insert>
 
 </mapper>
