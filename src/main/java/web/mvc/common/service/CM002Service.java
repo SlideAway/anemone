@@ -5,26 +5,27 @@ import web.mvc.common.dao.CM002Dao;
 import web.mvc.common.domain.CM002Dto;
 import web.mvc.common.domain.CM002Param;
 
-import java.util.List;
-
 public class CM002Service {
-	@Autowired private CM002Dao dao;
+    @Autowired
+    CM002Dao dao;
 
-	public boolean chkId(CM002Param param) {
-		int result = dao.check(param);
-		return valid(result);
-	}
+    public boolean chkId(CM002Param param) {
+        if(dao.get(param) > 0 )  {
+            return false;
+        } else {
+            return true;
+        }
 
-	public boolean chkNick(CM002Param param) {
-		int result = dao.check(param);
-		return valid(result);
-	}
-	private boolean valid(int result) {
-		if(result > 0) {
-			return false;
-		} else {
-			return true;
-		}
-	}
+    }
 
+    public boolean chkNick(CM002Param param) {
+        if(dao.get(param) > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    public void save(CM002Dto dto) {
+        dao.save(dto);
+    }
 }
