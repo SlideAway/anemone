@@ -9,32 +9,33 @@
     <h1>회원 가입</h1>
     <form>
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name">
+            <label for="userNm">Name</label>
+            <input type="text" class="form-control" id="userNm" name="userNm" placeholder="Name">
         </div>
         <div class="form-group">
             <label for="nickname">Nickname</label>
-            <input type="text" class="form-control" id="nickname" placeholder="Nickname" onkeyup="chkLength(value);">
+            <input type="text" class="form-control" id="nickname" name="nickName" placeholder="Nickname" onkeyup="chkLength(value);">
             <p id="chkNick"></p>
         </div>
         <div class="form-group">
             <label for="userId">ID</label>
-            <input type="text" class="form-control" id="userId" placeholder="ID" onkeyup="idChk(value);">
+            <input type="text" class="form-control" id="userId" name="userId" placeholder="ID" onkeyup="idChk(value);">
             <p id="chkId"></p>
         </div>
         <div class="form-group">
             <label for="userPwd">Password</label>
-            <input type="password" class="form-control" id="userPwd" placeholder="Password" onkeyup="pwdChk(value);">
+            <input type="password" class="form-control" id="userPwd" name="userPwd" placeholder="Password" onkeyup="pwdChk(value);">
             <p id="chkPw"></p>
         </div>
         <div class="form-group">
             <label for="chkPwd">Password 확인</label>
             <input type="password" class="form-control" id="chkPwd" placeholder="Password 확인" onkeyup="isSame(value);">
+            <input type="hidden" id="encPwd" name="encPwd">
             <p id="confPwd"></p>
         </div>
         <div class="form-group">
             <label for="Email">Email</label>
-            <input type="email" class="form-control" id="Email" onkeyup="emailChk(value);">
+            <input type="text" class="form-control" id="Email" name="email" onkeyup="emailChk(value);" placeholder="Email">
             <p id="chkEmail"></p>
         </div>
         <button type="button" class="btn btn-primary" onclick="doSubmit($(form));">회원 가입</button>

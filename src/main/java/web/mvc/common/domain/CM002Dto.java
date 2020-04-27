@@ -7,9 +7,11 @@ public class CM002Dto {
     private long    userSeq;
     private String  userNm;
     private String  userId;
+    private String  encPwd;
     private String  userPwd;
     private String  nickName;
-    private String  Email;
+    private String  userRole;
+    private String  email;
 
 
     @JsonSerialize(using = ToStringSerializer.class)
@@ -37,12 +39,12 @@ public class CM002Dto {
         this.userId = userId;
     }
 
-    public String getUserPwd() {
-        return userPwd;
+    public String getEncPwd() {
+        return encPwd;
     }
 
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
+    public void setEncPwd(String encPwd) {
+        this.encPwd = encPwd;
     }
 
     public String getNickName() {
@@ -54,10 +56,18 @@ public class CM002Dto {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 }

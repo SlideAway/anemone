@@ -2,12 +2,13 @@ package web.mvc.common.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import web.mvc.common.domain.CM002Dto;
 import web.mvc.common.domain.CM002Param;
 import web.mvc.common.service.CM002Service;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class CM002Controller {
@@ -34,8 +35,9 @@ public class CM002Controller {
         return service.chkNick(param);
     }
     @RequestMapping("/CM002_SAVE.do")
-    public String save(CM002Dto dto) {
+    public String saveUser(CM002Dto dto) {
+        dto.setUserRole("100");
         service.save(dto);
-        return "CM001";
+        return "redirect:CM001.do";
     }
 }

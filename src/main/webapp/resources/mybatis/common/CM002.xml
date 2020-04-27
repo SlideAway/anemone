@@ -21,7 +21,28 @@
 
 
     <insert id="save">
-
+        <selectKey resultType="long" keyProperty="userSeq" order="BEFORE">
+            select MAX(user_seq)+1 from tbl_user_info
+        </selectKey>
+        insert into tbl_user_info(
+            user_seq,
+            user_id,
+            user_nm,
+            user_pwd,
+            user_role,
+            user_nickname,
+            email,
+            reg_date
+        ) values(
+            #{userSeq},
+            #{userId},
+            #{userNm},
+            #{encPwd},
+            #{userRole},
+            #{email},
+            #{email},
+            to_char(now(), 'YYYYMMDDHH24MISS')
+        )
     </insert>
 
 </mapper>

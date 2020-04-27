@@ -18,21 +18,31 @@
                     <a class="nav-link" href="/CM003.do">SignIn <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Notice <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/US001.do">MyPage <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="boardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Boards
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/CT001.do">Notice</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/CT002.do">Free Board</a>
+                    </div>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      Service
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">BoxOffice</a>
+                        <a class="dropdown-item" href="/MV001.do">BoxOffice</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">TestRoom</a>
+                    <a class="nav-link" href="/TS001.do" tabindex="-1" aria-disabled="true">TestRoom</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

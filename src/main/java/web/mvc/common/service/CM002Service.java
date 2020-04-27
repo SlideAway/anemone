@@ -10,9 +10,12 @@ public class CM002Service {
     CM002Dao dao;
 
     public boolean chkId(CM002Param param) {
-        if(dao.get(param) > 0 )  {
+        int result = dao.get(param);
+        if(result > 0 )  {
+            System.out.println("중복");
             return false;
         } else {
+            System.out.println("사용가능");
             return true;
         }
 

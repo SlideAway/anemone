@@ -87,7 +87,7 @@ function isSame(value) {
 
 function doSubmit(obj) {
     //미입력 검증
-    if(JMLib.isEmpty(obj.find("#name"), "이름을 입력해주세요. ")) return false;
+    if(JMLib.isEmpty(obj.find("#userNm"), "이름을 입력해주세요. ")) return false;
     if(JMLib.isEmpty(obj.find("#nickname"), "닉네임을 입력해주세요. ")) return false;
     if(JMLib.isEmpty(obj.find("#userId"), "ID를 입력해주세요. ")) return false;
     if(JMLib.isEmpty(obj.find("#userPwd"), "패스워드를 입력해주세요. ")) return false;
@@ -101,17 +101,34 @@ function doSubmit(obj) {
     if(JMLib.isinValid(obj.find("#chkEmail"), "이메일이 유효하지 않습니다. ")) return false;
 
     //ID중복확인
-    if(!JMLib.Ajax(obj.find("#userId").val(), "/CM002_ID.do")) {
-        JMLib.JMalert("중복된 ID입니다. ");
-        return false;
-    }
-    //닉네임 중복확인
-    if(!JMLib.Ajax(obj, "/CM002_NICK.do")) {
-        JMLib.JMalert("중복된 닉네임입니다. ");
-        return false;
-    }
+    var value = obj.find("#userId").val();
 
-    obj.find("#userPwd").val(CryptoJS.SHA1($("#userPwd").val()).toString());
+    JMLib.Ajax("userId="+value, "/CM002_ID.do", function(data) {
+        console.log(data);
+        if(!data) {
+            JMLib.JMalert("중복된 ID입니다. ");
+            return false;
+        } else {
+            //닉네임 중복확인
+            value = obj.find("#nickname").val();
+            JMLib.Ajax("nickName="+value, "/CM002_NICK.do", function(data) {
+                console.log(data);
+                if(!data) {
+                    JMLib.JMalert("중복된 닉네임입니다. ");
+                    return false;
+                } else {
+                    //전송
+                    var form = $("form");
+                    $("#encPwd").val(CryptoJS.SHA1($("#userPwd").val()).toString());
+                    $("#userPwd").val('');
+                    $("#chkPwd").val('');
+                    form.attr("action", getContextPath() + "/CM002_SAVE.do")
+                    form.attr("method", "post");
+                    form.submit();
+                }
+            });
+        }
+    });
 
-    //전송
+
 }
