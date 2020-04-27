@@ -19,5 +19,4 @@ public class CM001Service {
         List<CM001Dto> result = dao.getFree();
         return result;
     }
-
 }
