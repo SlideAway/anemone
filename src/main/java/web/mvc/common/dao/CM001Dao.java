@@ -1,7 +1,7 @@
 package web.mvc.common.dao;
 
 import web.mvc.common.domain.CM001Dto;
-import web.mvc.common.domain.CM001Param;
+
 
 import java.util.List;
 

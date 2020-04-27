@@ -42,8 +42,9 @@
                                     <p class="mb-1">${free.content}</p>
                                     <small>${free.nickname}</small>
                                 </a>
-                            </div>
+                    </div>
                     </c:forEach>
+                            </div>
                         </p>
                 <a href="/CT002.do" style="margin: 10px; " class="card-link text-right">더보기</a>
                     </div>
