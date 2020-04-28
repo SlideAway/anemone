@@ -14,15 +14,17 @@
     <!--Controller Load-->
     <context:component-scan base-package="web" use-default-filters="false">
         <context:include-filter type="aspectj" expression="web.mvc.*.web.*"/>
+        <context:include-filter type="aspectj" expression="web.module.*.web.*"/>
     </context:component-scan>
     <!--Service Load -->
     <context:component-scan base-package="web" use-default-filters="false">
         <context:include-filter type="aspectj" expression="web.mvc.*.service.*"/>
+        <context:include-filter type="aspectj" expression="web.module.*.service.*"/>
     </context:component-scan>
     
     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/views/common"></property>
+        <property name="prefix" value="/WEB-INF/views/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
 
@@ -30,7 +32,8 @@
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
             <list>
-                <value>/WEB-INF/tiles/tiles.xml</value>
+                <value>/WEB-INF/tiles/common.xml</value>
+                <value>/WEB-INF/tiles/community.xml</value>
             </list>
         </property>
     </bean>

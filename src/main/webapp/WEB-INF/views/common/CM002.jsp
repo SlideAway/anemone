@@ -1,42 +1,57 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file ="/WEB-INF/views/common/common.jsp" %>
+<%@ include file="/WEB-INF/views/common/common.jsp" %>
 
 
 <script src="${CR}/resources/weblb/js/common/CM002.js"></script>
 
-<div class="container" style="width:30%;">
-    <h1>${pageContext.request.contextPath}</h1>
-    <h1>회원 가입</h1>
-    <form>
-        <div class="form-group">
-            <label for="userNm">Name</label>
-            <input type="text" class="form-control" id="userNm" name="userNm" placeholder="Name">
+<div class="container">
+    <form class="was-validated">
+        <div class="form-group row">
+            <label for="userNm" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control is-invalid" id="userNm" name="userNm" placeholder="Name" required>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="nickname">Nickname</label>
-            <input type="text" class="form-control" id="nickname" name="nickName" placeholder="Nickname" onkeyup="chkLength(value);">
-            <p id="chkNick"></p>
+        <div class="form-group row">
+            <label for="nickname" class="col-sm-2 col-form-label">Nickname</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control is-invalid" id="nickname" name="nickName" placeholder="Nickname"
+                       onkeyup="chkLength(value);" required>
+                <p id="chkNick"></p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="userId">ID</label>
-            <input type="text" class="form-control" id="userId" name="userId" placeholder="ID" onkeyup="idChk(value);">
-            <p id="chkId"></p>
+        <div class="form-group row">
+            <label for="userId" class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control is-invalid" id="userId" name="userId" placeholder="ID"
+                       onkeyup="idChk(value);" required>
+                <p id="chkId"></p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="userPwd">Password</label>
-            <input type="password" class="form-control" id="userPwd" name="userPwd" placeholder="Password" onkeyup="pwdChk(value);">
-            <p id="chkPw"></p>
+        <div class="form-group row">
+            <label for="userPwd" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control is-invalid" id="userPwd" name="userPwd" placeholder="Password"
+                       onkeyup="pwdChk(value);" required>
+                <p id="chkPw"></p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="chkPwd">Password 확인</label>
-            <input type="password" class="form-control" id="chkPwd" placeholder="Password 확인" onkeyup="isSame(value);">
-            <input type="hidden" id="encPwd" name="encPwd">
-            <p id="confPwd"></p>
+        <div class="form-group row">
+            <label for="chkPwd" class="col-sm-2 col-form-label">Password 확인</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control is-invalid" id="chkPwd" placeholder="Password 확인"
+                       onkeyup="isSame(value);" required>
+                <input type="hidden" id="encPwd" name="encPwd">
+                <p id="confPwd"></p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="Email">Email</label>
-            <input type="text" class="form-control" id="Email" name="email" onkeyup="emailChk(value);" placeholder="Email">
-            <p id="chkEmail"></p>
+        <div class="form-group row">
+            <label for="Email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control is-invalid" id="Email" name="email" onkeyup="emailChk(value);"
+                       placeholder="Email" required>
+                <p id="chkEmail"></p>
+            </div>
         </div>
         <button type="button" class="btn btn-primary" onclick="doSubmit($(form));">회원 가입</button>
     </form>

@@ -5,7 +5,6 @@
       <configuration>
         <fileset id="fileset" name="Mybatis Config" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/mybatis/mybatis-config.xml</file>
         </fileset>
       </configuration>
     </facet>

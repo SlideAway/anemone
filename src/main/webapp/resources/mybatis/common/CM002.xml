@@ -14,11 +14,6 @@
         </where>
     </select>
 
-    <select id="getNick" resultType="int">
-        select count(*) from tbl_user_info
-    </select>
-
-
 
     <insert id="save">
         <selectKey resultType="long" keyProperty="userSeq" order="BEFORE">
@@ -39,7 +34,7 @@
             #{userNm},
             #{encPwd},
             #{userRole},
-            #{email},
+            #{nickname},
             #{email},
             to_char(now(), 'YYYYMMDDHH24MISS')
         )

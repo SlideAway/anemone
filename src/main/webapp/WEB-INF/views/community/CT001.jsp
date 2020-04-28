@@ -5,12 +5,46 @@
 
 
 <div class="container-fluid">
-    <table class="table">
+    <table class="table table-striped table-hover">
+        <colgroup>
+            <col width="10%">
+            <col width="50%">
+            <col width="20%">
+            <col width="20%">
+        </colgroup>
         <thead>
         <tr>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col">No.</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+            <th scope="col">작성 날짜</th>
         </tr>
         </thead>
+        <tbody>
+        <c:forEach var="i" begin="0" end="9" varStatus="status">
+<%--            <input type="hidden" value="#{notice.freeSeq}">--%>
+            <tr onclick="doView(${noticeList[i].contentSeq})">
+                <td scope="row">${status.count}</td>
+                <td>${noticeList[i].title}</td>
+                <td>${noticeList[i].nickname}</td>
+                <td>${noticeList[i].regDate}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
     </table>
+    <input class="btn btn-primary" style="float:right;" type="button" value="글 쓰기" onclick="goInsert();">
+    <br/><br/>
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
 </div>

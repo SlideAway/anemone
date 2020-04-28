@@ -7,14 +7,18 @@
 <html>
 <head>
     <%@ include file="/WEB-INF/views/common/commonHead.jsp"%>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="wrapper">
     <tiles:insertAttribute name="top"/>
-
-    <section class="content" style="padding: 10px">
-        <tiles:insertAttribute name="contents" />
+    <section class="content-header" style="padding: 10px;">
+        <h1><tiles:insertAttribute name="title"/></h1>
+        <section class="content" style="padding: 10px;">
+            <tiles:insertAttribute name="contents" />
+        </section>
     </section>
+
 </div>
 </body>
 </html>

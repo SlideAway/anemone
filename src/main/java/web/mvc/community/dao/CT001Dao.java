@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface CT001Dao {
 	public List<CT001Dto> getNotice(CT001Param param);
+	public int getCount(CT001Param param);
+	public void saveNotice(CT001Param param);
 }

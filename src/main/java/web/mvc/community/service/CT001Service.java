@@ -16,4 +16,10 @@ public class CT001Service {
 		List<CT001Dto> result = dao.getNotice(param);
 		return result;
 	}
+	public int getCount(CT001Param param) {
+		return dao.getCount(param);
+	}
+	public void save(CT001Param param) {
+		dao.saveNotice(param);
+	}
 }

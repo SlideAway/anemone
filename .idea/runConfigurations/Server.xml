@@ -5,6 +5,7 @@
     <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
     <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
     <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+    <option name="UPDATING_POLICY" value="redeploy-artifacts" />
     <deployment>
       <artifact name="SpringPractice:war exploded">
         <settings>
@@ -15,9 +16,10 @@
     <server-settings>
       <option name="BASE_DIRECTORY_NAME" value="Unnamed_SpringPractice_4" />
     </server-settings>
-    <log_file checked="false" alias="Tomcat Host Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/host-manager.*" />
-    <log_file checked="false" alias="Tomcat Localhost Access Log" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost_access_log.*" />
-    <predefined_log_file enabled="true" id="Tomcat" />
+    <log_file alias="Tomcat Host Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/host-manager.*" skipped="false" />
+    <log_file alias="Tomcat Localhost Access Log" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost_access_log.*" skipped="false" />
+    <log_file alias="Tomcat Localhost Log" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost.*" skipped="false" />
+    <log_file alias="localhost" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost.*.log" skipped="false" />
     <predefined_log_file enabled="true" id="Tomcat Catalina" />
     <predefined_log_file id="Tomcat Manager" />
     <RunnerSettings RunnerId="Debug">

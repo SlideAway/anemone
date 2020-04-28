@@ -7,6 +7,7 @@
     </settings>
     <typeAliases>
         <package name="web.mvc.common.domain"/>
+        <package name="web.mvc.community.domain"/>
 <!--        <package name="web.mvc.movie.domain"/>-->
     </typeAliases>
 </configuration>

@@ -6,13 +6,20 @@
     <!--기본 레이아웃 -->
     <definition name="DEFAULT"      template="/WEB-INF/views/common/layoutDefault.jsp">
         <put-attribute name="top"       value="/WEB-INF/views/common/commonTop.jsp"/>
-        <put-attribute name="left"      value="/MENU_TREE.do"/>
+        <put-attribute name="left"      value="/WEB-INF/views/common/commonmenu.jsp"/>
     </definition>
     <definition name="CM001" extends="DEFAULT">
+        <put-attribute name="title"    value=""/>
         <put-attribute name="contents" value="/WEB-INF/views/common/CM001.jsp"/>
     </definition>
     <definition name="CM002" extends="DEFAULT">
-        <put-attribute name="contents" value="/WEB-INF/views/common/CM002.jsp"/>
+        <put-attribute name="title"     value="회원가입"/>
+        <put-attribute name="contents"  value="/WEB-INF/views/common/CM002.jsp"/>
     </definition>
+    <definition name="CM003" extends="DEFAULT">
+        <put-attribute name="title"     value="로그인"/>
+        <put-attribute name="contents"  value="/WEB-INF/views/common/CM003.jsp"/>
+    </definition>
+
 
 </tiles-definitions>

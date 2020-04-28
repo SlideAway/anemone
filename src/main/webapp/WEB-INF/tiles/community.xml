@@ -1,0 +1,15 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuraton 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="CT001" extends="DEFAULT">
+        <put-attribute name="title"     value="공지사항"/>
+        <put-attribute name="contents"  value="/WEB-INF/views/community/CT001.jsp"/>
+    </definition>
+
+    <definition name="CT001_INS" extends="DEFAULT">
+        <put-attribute name="title"     value="공지사항 글쓰기"/>
+        <put-attribute name="contents"  value="/WEB-INF/views/community/CT001Ins.jsp"/>
+    </definition>
+</tiles-definitions>

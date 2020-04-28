@@ -4,6 +4,41 @@
 <mapper namespace="web.mvc.community.dao.CT001Dao">
     <select id="getNotice" resultType="CT001Dto">
         select
+            a.notice_seq		as		contentSeq,
+            a.title			as		title,
+            a.content		as 		content,
+            b.user_nickname	as		nickname,
+            a.reg_date		as		regDate
+
+        from 			tbl_notice_board	a
+        left outer join tbl_user_info	    b	on a.reg_user = b.user_seq
+        <where>
+            <if test="searchType = '1' and keyword != null">
+                a.title = %#{keyword}%
+            </if>
+            <if test="searchType = '2' and keyword != null">
+                a.title = %#{keyword} OR a.content = %#{keyword}
+            </if>
+            <if test="searchType = '3' and keyword != null">
+                b.user_nickname = keyword
+            </if>
+        </where>
+    </select>
+    <select id="getCount" resultType="int">
+        select count(*)
+        from 			tbl_free_board	a
+        left outer join tbl_user_info	b	on a.reg_user = b.user_seq
+        <where>
+            <if test="searchType = '1' and keyword != null">
+                a.title = %#{keyword}%
+            </if>
+            <if test="searchType = '2' and keyword != null">
+                a.title = %#{keyword} OR a.content = %#{keyword}
+            </if>
+            <if test="searchType = '3' and keyword != null">
+                b.user_nickname = keyword
+            </if>
+        </where>
     </select>
 
 </mapper>
