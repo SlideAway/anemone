@@ -22,4 +22,7 @@ public class CT001Service {
 	public void save(CT001Param param) {
 		dao.saveNotice(param);
 	}
+	public CT001Dto getDetail(long contentSeq) {
+		return dao.getDetail(contentSeq);
+	}
 }

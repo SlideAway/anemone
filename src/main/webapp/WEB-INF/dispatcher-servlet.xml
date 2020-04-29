@@ -9,7 +9,6 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
     <mvc:annotation-driven/>
-<!--    <mvc:resources mapping="/resources/**" location="WEB-INF/"/>-->
 
     <!--Controller Load-->
     <context:component-scan base-package="web" use-default-filters="false">
@@ -19,7 +18,9 @@
     <!--Service Load -->
     <context:component-scan base-package="web" use-default-filters="false">
         <context:include-filter type="aspectj" expression="web.mvc.*.service.*"/>
+        <context:include-filter type="aspectj" expression="web.mvc.*.dao.*"/>
         <context:include-filter type="aspectj" expression="web.module.*.service.*"/>
+        <context:include-filter type="aspectj" expression="web.module.*.*"/>
     </context:component-scan>
     
     
@@ -34,6 +35,7 @@
             <list>
                 <value>/WEB-INF/tiles/common.xml</value>
                 <value>/WEB-INF/tiles/community.xml</value>
+                <value>/WEB-INF/tiles/movie.xml</value>
             </list>
         </property>
     </bean>

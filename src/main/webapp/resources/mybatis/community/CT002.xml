@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="web.mvc.community.dao.CT001Dao">
-    <select id="getNotice" resultType="CT001Dto">
+<mapper namespace="web.mvc.community.dao.CT002Dao">
+    <select id="getList" resultType="CT002Dto">
         select
-            a.notice_seq		as		contentSeq,
-            a.title			as		title,
-            a.content		as 		content,
-            b.user_nickname	as		nickname,
-            a.reg_date		as		regDate
+        a.free_seq		as		contentSeq,
+        a.title			as		title,
+        a.content		as 		content,
+        b.user_nickname	as		nickname,
+        a.reg_date		as		regDate
 
-        from 			tbl_notice_board	a
+        from 			tbl_free_board	a
         left outer join tbl_user_info	    b	on a.reg_user = b.user_seq
         <where>
             <if test="searchType = '1' and keyword != null">
@@ -24,9 +24,10 @@
             </if>
         </where>
     </select>
+
     <select id="getCount" resultType="int">
         select count(*)
-        from 			tbl_notice_board	a
+        from 			tbl_free_board	a
         left outer join tbl_user_info	b	on a.reg_user = b.user_seq
         <where>
             <if test="searchType = '1' and keyword != null">
@@ -43,14 +44,14 @@
 
     <select id="getDetail" resultType="CT001Dto">
         select
-            a.title	    		as		title,
-            a.content	    	as 		content,
-            b.user_nickname	    as		nickname,
-            a.reg_date		    as		regDate
-        from 			tbl_notice_board	a
+        a.title	    		as		title,
+        a.content	    	as 		content,
+        b.user_nickname	    as		nickname,
+        a.reg_date		    as		regDate
+        from 			tbl_free_board  	a
         left outer join tbl_user_info	    b	on a.reg_user = b.user_seq
         <where>
-            a.notice_seq = #{contentSeq}
+            a.free_seq = #{contentSeq}
         </where>
     </select>
 

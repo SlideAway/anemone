@@ -33,6 +33,14 @@ public class CT001Controller {
 		//model.addAttribute("count", count);
 		return "CT001";
 	}
+
+	@RequestMapping("/CT001_DETAIL.do")
+	public String detail(Model model, long contentSeq) {
+		CT001Dto result = service.getDetail(contentSeq);
+		model.addAttribute("detail", result);
+		return "CT001DETAIL";
+	}
+
 	@RequestMapping("/CT001_INS.do")
 	public String insert(Model model, Principal auth) {
 		return "CT001_INS";

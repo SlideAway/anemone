@@ -1,5 +1,5 @@
 function doView(seq) {
-    console.log(seq);
+    location.href = getContextPath() + "/CT001_DETAIL.do?contentSeq="+seq;
 }
 function goPage(num) {
     console.log(num);

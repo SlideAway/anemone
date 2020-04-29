@@ -24,7 +24,7 @@
                     </c:forEach>
                 </div>
                 </p>
-            <a href="/CT002.do" style="margin: 10px; " class="card-link text-right">더보기</a>
+            <a href="/CT001.do" style="margin: 10px; " class="card-link text-right">더보기</a>
             </div>
         </div>
         <div class="col-lg-4">
