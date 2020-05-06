@@ -7,15 +7,15 @@
 <div class="container">
     <form class="was-validated">
         <div class="form-group row">
-            <label for="userId" class="col-sm-1 col-form-label">ID</label>
+            <label for="username" class="col-sm-1 col-form-label">ID</label>
             <div class="col-sm-3">
-                <input type="text" class="form-control is-invalid" id="userId" name="userId" placeholder="ID" required>
+                <input type="text" class="form-control is-invalid" id="username" name="username" placeholder="ID" required>
             </div>
         </div>
         <div class="form-group row">
-            <label for="userPwd" class="col-sm-1 col-form-label">Password</label>
+            <label for="password" class="col-sm-1 col-form-label">Password</label>
             <div class="col-sm-3">
-                <input type="password" class="form-control is-invalid" id="userPwd" name="userPwd" placeholder="Password" required>
+                <input type="password" class="form-control is-invalid" id="password" name="password" placeholder="Password" required>
                 <input type="hidden" id="encPwd">
             </div>
         </div>

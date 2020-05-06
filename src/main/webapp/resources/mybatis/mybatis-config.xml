@@ -6,8 +6,10 @@
         <setting name="cacheEnabled" value="false"/>
     </settings>
     <typeAliases>
+        <package name="web.module.auth.domain"/>
         <package name="web.mvc.common.domain"/>
         <package name="web.mvc.community.domain"/>
-<!--        <package name="web.mvc.movie.domain"/>-->
+        <package name="web.mvc.movie.domain"/>
+        <package name="web.mvc.user.domain"/>
     </typeAliases>
 </configuration>

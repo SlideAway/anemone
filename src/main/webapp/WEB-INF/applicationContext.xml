@@ -37,6 +37,7 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage">
             <value>
+                web.module.*.dao
                 web.mvc.*.dao
             </value>
         </property>

@@ -1,0 +1,15 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuraton 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="ER001" extends="DEFAULT">
+        <put-attribute name="title" value="찾을 수 없음"/>
+        <put-attribute name="contents" value="/WEB-INF/views/error/ER001.jsp"/>
+    </definition>
+
+    <definition name="ER002" extends="DEFAULT">
+        <put-attribute name="title" value="잘못된 접근"/>
+        <put-attribute name="contents" value="/WEB-INF/views/error/ER002.jsp"/>
+    </definition>
+</tiles-definitions>

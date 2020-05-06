@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.module.auth.dao.MemberMapper">
+    <resultMap type="web.module.auth.domain.MemberVO" id="memberMap">
+        <id property="username" column="username"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="userNm" column="userNm"/>
+        <result property="roleNm" column="roleNm"/>
+        <result property="nickname" column="nickname"/>
+        <result property="regDate" column="regDate"/>
+        <collection property="authList" resultMap="authMap">
+        </collection>
+    </resultMap>
+
+    <resultMap id="authMap" type="web.module.auth.domain.AuthVO">
+        <result property="userId" column="userId"/>
+        <result property="auth" column="auth"/>
+    </resultMap>
+    
+    <select id="getUserInfo" resultMap="memberMap">
+        select 	 a.user_id			as		username
+        		,a.user_nm			as		userNm
+        		,a.user_pwd         as      password
+        		,b.role_nm			as		roleNm
+        		,b.auth             as      auth
+		        ,a.user_nickname	as		nickname
+        		,a.reg_date			as		regDate
+
+        from			tbl_user_info a
+        left outer join tbl_role_info b on a.user_role = b.role_cd
+        <where>
+            user_id = #{username}
+        </where>
+    </select>
+
+</mapper>

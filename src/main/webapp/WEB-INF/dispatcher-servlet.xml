@@ -20,7 +20,7 @@
         <context:include-filter type="aspectj" expression="web.mvc.*.service.*"/>
         <context:include-filter type="aspectj" expression="web.mvc.*.dao.*"/>
         <context:include-filter type="aspectj" expression="web.module.*.service.*"/>
-        <context:include-filter type="aspectj" expression="web.module.*.*"/>
+        <context:include-filter type="aspectj" expression="web.module.*.dao.*"/>
     </context:component-scan>
     
     
@@ -35,6 +35,7 @@
             <list>
                 <value>/WEB-INF/tiles/common.xml</value>
                 <value>/WEB-INF/tiles/community.xml</value>
+                <value>/WEB-INF/tiles/error.xml</value>
                 <value>/WEB-INF/tiles/movie.xml</value>
             </list>
         </property>
