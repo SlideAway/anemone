@@ -56,7 +56,7 @@
                 </li>
                 <sec:authorize access="isAuthenticated()">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Logout <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/CM003_LOGOUT.do">Logout <span class="sr-only">(current)</span></a>
                 </li>
                 </sec:authorize>
             </ul>

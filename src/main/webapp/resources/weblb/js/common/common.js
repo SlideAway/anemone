@@ -61,6 +61,14 @@ JMLib = {
             icon: "error",
             button: "확인",
         });
+    },
+    JMinfo(String) {
+        swal({
+            title : "Success!",
+            text : String,
+            icon : "success",
+            button : "확인"
+        });
     }
 }
 function getContextPath() {

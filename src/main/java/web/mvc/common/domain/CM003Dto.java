@@ -11,6 +11,7 @@ public class CM003Dto {
 	private String userPwd;
 	private String userNm;
 	private String nickname;
+	private String email;
 	private Date regDate;
 
 	@JsonSerialize(using = ToStringSerializer.class)
@@ -60,5 +61,13 @@ public class CM003Dto {
 
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

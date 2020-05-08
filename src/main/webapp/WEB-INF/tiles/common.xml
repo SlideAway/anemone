@@ -33,5 +33,9 @@
         <put-attribute name="title" value="Password 찾기"/>
         <put-attribute name="contents" value="/WEB-INF/views/common/CM003Pass.jsp"/>
     </definition>
+    <definition name="CM003Logout" extends="DEFAULT">
+        <put-attribute name="title" value="로그아웃"/>
+        <put-attribute name="contents" value="/WEB-INF/views/common/CM003Logout.jsp"/>
+    </definition>
 
 </tiles-definitions>
