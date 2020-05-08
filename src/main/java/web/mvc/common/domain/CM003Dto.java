@@ -3,13 +3,15 @@ package web.mvc.common.domain;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
+import java.util.Date;
+
 public class CM003Dto {
 	private long userSeq;
 	private String userId;
 	private String userPwd;
 	private String userNm;
 	private String nickname;
-	private String regDate;
+	private Date regDate;
 
 	@JsonSerialize(using = ToStringSerializer.class)
 	public long getUserSeq() {
@@ -52,11 +54,11 @@ public class CM003Dto {
 		this.nickname = nickname;
 	}
 
-	public String getRegDate() {
+	public Date getRegDate() {
 		return regDate;
 	}
 
-	public void setRegDate(String regDate) {
+	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
 }

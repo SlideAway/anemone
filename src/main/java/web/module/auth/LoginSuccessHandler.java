@@ -4,9 +4,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +20,12 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		});
 
 		if(roleNames.contains("ROLE_ADMIN")) {
-			response.sendRedirect("/");
+			response.sendRedirect(request.getContextPath() + "/CM003_LOGIN.do?error=0");
 //			response.sendRedirect("/US001.do");
-			return;
-		} if(roleNames.contains("ROLE_MEMBER")) {
-			response.sendRedirect("/");
-//			response.sendRedirect("/US001.do");
-			return;
 		}
-		response.sendRedirect("/");
+		if(roleNames.contains("ROLE_MEMBER")) {
+			response.sendRedirect(request.getContextPath() + "/CM003_LOGIN.do?error=0");
+//			response.sendRedirect("/US001.do");
+		}
 	}
 }

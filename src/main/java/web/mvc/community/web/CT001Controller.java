@@ -1,11 +1,14 @@
 package web.mvc.community.web;
 
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestParam;
+import web.module.auth.domain.MemberVO;
 import web.mvc.community.domain.CT001Dto;
 import web.mvc.community.domain.CT001Param;
 import web.mvc.community.service.CT001Service;

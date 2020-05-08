@@ -3,8 +3,8 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-    <definition name="MV001" extends="DEFAULT">
-        <put-attribute name="title" value="박스오피스"/>
-        <put-attribute name="contents" value="/WEB-INF/views/movie/MV001.jsp"/>
+    <definition name="US001" extends="DEFAULT">
+        <put-attribute name="title" value="마이페이지"/>
+        <put-attribute name="contents" value="/WEB-INF/views/user/US001.jsp"/>
     </definition>
 </tiles-definitions>

@@ -13,10 +13,10 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="password" class="col-sm-1 col-form-label">Password</label>
+            <label for="plain" class="col-sm-1 col-form-label">Password</label>
             <div class="col-sm-3">
-                <input type="password" class="form-control is-invalid" id="password" name="password" placeholder="Password" required>
-                <input type="hidden" id="encPwd">
+                <input type="password" class="form-control is-invalid" id="plain" name="plain" placeholder="Password" onkeyup="enterKey(event);" required>
+                <input type="hidden" id="password" name="password">
             </div>
         </div>
         <div class="form-group row">
@@ -24,6 +24,8 @@
                 <a href="/CM003_FINDID.do" style="margin: 10px;" class="card-link text-right">Forgot ID?</a>
                 <br>
                 <a href="/CM003_FINDPASS.do" style="margin: 10px;" class="card-link text-right">Forgot Password?</a>
+                <br>
+
             </div>
             <div class="col-sm-2">
                 <button type="button" style="float: right;" class="btn btn-primary" onclick="doLogin($(form));">로그인</button>

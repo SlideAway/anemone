@@ -1,0 +1,6 @@
+function chgPass() {
+    
+}
+function chgInfo() {
+
+}

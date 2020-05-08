@@ -1,43 +1,33 @@
 package web.module.auth.domain;
 
-import java.util.Date;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.List;
 
-public class MemberVO {
-
+@Data
+public class MemberVO implements Serializable {
+	private long userSeq;
 	private String userId;
-	private String password;
-	private String username;
+	private String userNm;
+	private String userPwd;
 	private String nickname;
-	private boolean enabled;
 	private String roleNm;
+	private String email;
+	private boolean enabled;
 
-	private Date regDate;
-	private Date upDate;
+	private String regDate;
 	private List<AuthVO> authList;
 
-	public String getRoleNm() {
-		return roleNm;
+	@JsonSerialize(using = ToStringSerializer.class)
+	public long getUserSeq() {
+		return userSeq;
 	}
 
-	public void setRoleNm(String roleNm) {
-		this.roleNm = roleNm;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-
-	public Date getUpDate() {
-		return upDate;
-	}
-
-	public void setUpDate(Date upDate) {
-		this.upDate = upDate;
+	public void setUserSeq(long userSeq) {
+		this.userSeq = userSeq;
 	}
 
 	public String getUserId() {
@@ -48,20 +38,20 @@ public class MemberVO {
 		this.userId = userId;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getUserPwd() {
+		return userPwd;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserPwd(String userPwd) {
+		this.userPwd = userPwd;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getNickname() {
+		return nickname;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 
 	public boolean isEnabled() {
@@ -72,11 +62,11 @@ public class MemberVO {
 		this.enabled = enabled;
 	}
 
-	public Date getRegDate() {
+	public String getRegDate() {
 		return regDate;
 	}
 
-	public void setRegDate(Date regDate) {
+	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
 
@@ -86,5 +76,29 @@ public class MemberVO {
 
 	public void setAuthList(List<AuthVO> authList) {
 		this.authList = authList;
+	}
+
+	public String getUserNm() {
+		return userNm;
+	}
+
+	public void setUserNm(String userNm) {
+		this.userNm = userNm;
+	}
+
+	public String getRoleNm() {
+		return roleNm;
+	}
+
+	public void setRoleNm(String roleNm) {
+		this.roleNm = roleNm;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

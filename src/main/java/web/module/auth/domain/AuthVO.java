@@ -1,16 +1,11 @@
 package web.module.auth.domain;
 
+import lombok.Data;
+
+@Data
 public class AuthVO {
-	private String userid;
+	private String userId;
 	private String auth;
-
-	public String getUserid() {
-		return userid;
-	}
-
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
 
 	public String getAuth() {
 		return auth;
@@ -18,5 +13,13 @@ public class AuthVO {
 
 	public void setAuth(String auth) {
 		this.auth = auth;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 }

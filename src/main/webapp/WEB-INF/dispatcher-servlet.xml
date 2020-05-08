@@ -22,13 +22,14 @@
         <context:include-filter type="aspectj" expression="web.module.*.service.*"/>
         <context:include-filter type="aspectj" expression="web.module.*.dao.*"/>
     </context:component-scan>
+
     
     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
-
+    
 
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
@@ -37,6 +38,7 @@
                 <value>/WEB-INF/tiles/community.xml</value>
                 <value>/WEB-INF/tiles/error.xml</value>
                 <value>/WEB-INF/tiles/movie.xml</value>
+                <value>/WEB-INF/tiles/user.xml</value>
             </list>
         </property>
     </bean>

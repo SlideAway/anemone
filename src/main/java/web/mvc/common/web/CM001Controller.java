@@ -25,7 +25,7 @@ public class CM001Controller {
         List<CM001Dto> notice = service.getNotice();
         List<CM001Dto> free = service.getFree();
         dateController dateFormat = new dateController();
-        for(int i = 0; i<4; i++) {
+        for(int i = 0; i<notice.size(); i++) {
             notice.get(i).setRegDate(dateFormat.dateFmt(notice.get(i).getRegDate()));
             free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
         }

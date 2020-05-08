@@ -16,8 +16,8 @@ public class MV001Controller {
 
 	@RequestMapping("/MV001.do")
 	public String main(Model model) throws  Exception{
-		HashMap<Object, String> boxOffice = service.getBox();
-		model.addAttribute("boxOffice", boxOffice);
+//		HashMap<Object, String> boxOffice = service.getBox();
+//		model.addAttribute("boxOffice", boxOffice);
 		return "MV001";
 	}
 }
