@@ -13,6 +13,7 @@
     <!--Controller Load-->
     <context:component-scan base-package="web" use-default-filters="false">
         <context:include-filter type="aspectj" expression="web.mvc.*.web.*"/>
+        <context:include-filter type="aspectj" expression="web.module.auth.*"/>
         <context:include-filter type="aspectj" expression="web.module.*.web.*"/>
     </context:component-scan>
     <!--Service Load -->

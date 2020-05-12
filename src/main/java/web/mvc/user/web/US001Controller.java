@@ -9,17 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import web.module.auth.domain.CustomUser;
 import web.module.date.web.dateController;
-
-import web.mvc.user.domain.US001Dto;
+import web.module.auth.getInfo;
 import web.module.auth.domain.MemberVO;
 import web.mvc.user.service.US001Service;
 
-import java.lang.reflect.Field;
-import java.text.SimpleDateFormat;
 
 
 @Controller
-public class US001Controller {
+public class US001Controller extends getInfo{
 
 	@Autowired
 	private US001Service serivce;
@@ -29,12 +26,13 @@ public class US001Controller {
 		try {
 			dateController date = new dateController();
 			JSONObject json = new JSONObject();
-
+			MemberVO vo = new MemberVO();
+			getInfo getInfo = new getInfo();
 			CustomUser userInfo = (CustomUser)auth.getPrincipal();
-			MemberVO vo = userInfo.getMember();
-			model.addAttribute("data", vo);
-			vo.setRegDate(date.dateFmt(vo.getRegDate()));
+			vo = userInfo.getMember();
+			json = getInfo.get(vo);
 
+			model.addAttribute("data", json);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

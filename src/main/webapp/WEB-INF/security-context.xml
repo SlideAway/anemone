@@ -10,7 +10,8 @@
     <security:http auto-config="true" use-expressions="true">
         <security:intercept-url pattern="/CT001_INS.do" access="hasRole('ROLE_ADMIN')" />
         <security:intercept-url pattern="/CT001.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')" />
-        <security:intercept-url pattern="/US001.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')"/>
+<!--        <security:intercept-url pattern="/US001.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')"/>-->
+        <security:intercept-url pattern="/US*.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')"/>
         <security:intercept-url pattern="/**" access="permitAll()" />
         <security:csrf disabled="true"/>
         <security:form-login login-page="/CM003.do"
