@@ -1,9 +1,8 @@
 function doLogin(obj) {
     if(JMLib.isEmpty(obj.find("#username"), "ID를 입력해주세요. ")) return false;
-    if(JMLib.isEmpty(obj.find("#plain"), "패스워드를 입력해주세요. ")) return false;
+    if(JMLib.isEmpty(obj.find("#userPwd"), "패스워드를 입력해주세요. ")) return false;
 
-    obj.find("#password").val(CryptoJS.SHA1($("#plain").val()).toString());
-    obj.find("#plain").val('');
+    obj.find("#password").val('');
     var sendDate = {
         "username" : obj.find("#username").val(),
         "password" : obj.find("#password").val()

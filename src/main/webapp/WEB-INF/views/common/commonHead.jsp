@@ -1,16 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/views/common/common.jsp" %>
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+
 
 <title>Karma</title>
 
-<!--getBootStrap CSS 4.4.1 -->
-<script src="${CR}/resources/jquery3.4.1/jquery-3.4.1.js"></script>
 
-<%--startBootStrap--%>
-<script src="${CR}/resources/startbootstrap/js/sb-admin-2.min.js"></script>
-<link rel="stylesheet" href="${CR}/resources/startbootstrap/css/sb-admin-2.min.css"/>
+
 
 <%--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>--%>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -23,6 +24,17 @@
 
 <%--SweetAlert--%>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="${CR}/resources/startbootstrap/vendor/chart.js/Chart.min.js"></script>
+
+<link rel="stylesheet" href="${CR}/resources/startbootstrap/css/sb-admin-2.min.css"/>
+
+<%--StartBootStrap Custom fonts--%>
+<link rel="stylesheet" type="text/css" href="${CR}/resources/startbootstrap/vendor/fontawesome-free/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
 
 <%--Custom Lib--%>
 <script src="${CR}/resources/weblb/js/common/common.js"></script>

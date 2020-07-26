@@ -28,7 +28,7 @@ public class CM002Service {
             return true;
         }
     }
-    public void save(CM002Dto dto) {
-        dao.save(dto);
+    public int save(CM002Param param) {
+        return dao.save(param);
     }
 }

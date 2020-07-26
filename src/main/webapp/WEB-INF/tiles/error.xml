@@ -3,13 +3,13 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-    <definition name="ER001" extends="DEFAULT">
-        <put-attribute name="title" value="찾을 수 없음"/>
-        <put-attribute name="contents" value="/WEB-INF/views/error/ER001.jsp"/>
+    <definition name="404Error" extends="DEFAULT">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="contents" value="/WEB-INF/views/error/404Error.jsp"/>
     </definition>
 
-    <definition name="ER002" extends="DEFAULT">
-        <put-attribute name="title" value="잘못된 접근"/>
-        <put-attribute name="contents" value="/WEB-INF/views/error/ER002.jsp"/>
+    <definition name="500Error" extends="DEFAULT">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="contents" value="/WEB-INF/views/error/500Error.jsp"/>
     </definition>
 </tiles-definitions>

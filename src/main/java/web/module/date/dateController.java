@@ -1,4 +1,4 @@
-package web.module.date.web;
+package web.module.date;
 
 public class dateController {
 	public String dateFmt(String date) {//YYYYMMDDHHMMSS를 YY.MM.DD.HH.MM으로 반환

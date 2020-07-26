@@ -10,8 +10,8 @@ JMLib = {
             return true;
         }
     },
-    isinValid(obj, String) {
-        if(obj.attr("class") === "text-danger") {
+    isinValid(value, String) {
+        if(value == false) {
             swal({
                 title: "Error",
                 text: String,

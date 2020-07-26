@@ -9,17 +9,38 @@
     <%@ include file="/WEB-INF/views/common/commonHead.jsp" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-<div class="wrapper">
-    <tiles:insertAttribute name="top"/>
-    <div class="container-fluid">
-        <section class="content-header" style="padding: 10px;">
-            <h1><tiles:insertAttribute name="title"/></h1>
-            <section class="content" style="padding: 10px;">
-                <tiles:insertAttribute name="contents"/>
+<body id="page-top">
+<div id="wrapper">
+    <tiles:insertAttribute name="sidebar"></tiles:insertAttribute>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <tiles:insertAttribute name="top"/>
+            <section class="content-header" style="padding: 10px;">
+                <div class="container">
+                <h1><tiles:insertAttribute name="title"/></h1>
+                <section class="content" style="padding: 10px;">
+                    <tiles:insertAttribute name="contents"/>
+                </section>
+                </div>
             </section>
-        </section>
+        </div>
     </div>
 </div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="${CR}/resources/startbootstrap/vendor/jquery/jquery.min.js"></script>
+<script src="${CR}/resources/startbootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="${CR}/resources/startbootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="${CR}/resources/startbootstrap/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="${CR}/resources/startbootstrap/vendor/chart.js/Chart.min.js"></script>
+
+
+
 </body>
 </html>

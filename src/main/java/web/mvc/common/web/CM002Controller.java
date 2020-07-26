@@ -1,6 +1,7 @@
 package web.mvc.common.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class CM002Controller {
 
+
     @Autowired
     CM002Service service;
+
+    @Autowired
+    BCryptPasswordEncoder pwdEncoder;
 
     @RequestMapping("/CM002.do")
     public String main() {
@@ -22,22 +27,15 @@ public class CM002Controller {
     }
 
     @RequestMapping("/CM002_ID.do")
-    public @ResponseBody boolean checkId(CM002Dto dto) {
-        CM002Param param = new CM002Param();
-        param.setUserId(dto.getUserId());
+    public @ResponseBody boolean checkId(CM002Param param) {
         return service.chkId(param);
     }
 
-    @RequestMapping("/CM002_NICK.do")
-    public @ResponseBody boolean checkNick(CM002Dto dto) {
-        CM002Param param = new CM002Param();
-        param.setNickName(dto.getNickName());
-        return service.chkNick(param);
-    }
     @RequestMapping("/CM002_SAVE.do")
-    public String saveUser(CM002Dto dto) {
-        dto.setUserRole("100");
-        service.save(dto);
+    public String saveUser(CM002Param param) {
+        param.setUserPwd(pwdEncoder.encode(param.getUserPwd()));
+        param.setUserRole("100");
+        service.save(param);
         return "redirect:CM001.do";
     }
 }

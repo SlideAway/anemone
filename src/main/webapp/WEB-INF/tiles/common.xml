@@ -6,7 +6,7 @@
     <!--기본 레이아웃 -->
     <definition name="DEFAULT"      template="/WEB-INF/views/common/layoutDefault.jsp">
         <put-attribute name="top"       value="/WEB-INF/views/common/commonTop.jsp"/>
-        <put-attribute name="left"      value="/WEB-INF/views/common/commonmenu.jsp"/>
+        <put-attribute name="sidebar"      value="/WEB-INF/views/common/commonmenu.jsp"/>
     </definition>
 
     <definition name="CM001" extends="DEFAULT">

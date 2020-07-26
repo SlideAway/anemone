@@ -33,6 +33,7 @@
     <bean id="customLoginFailure" class="web.module.auth.LoginFailureHandler"></bean>
     <bean id="userService" class="web.module.auth.service.userDetailsService"></bean>
     <bean id="passwordEncoder" class="web.module.auth.NoOpPasswordEncoder"></bean>
+    <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
     <bean id="customLoginSuccess" class="web.module.auth.LoginSuccessHandler"></bean>
     <bean id="customLoginDeny" class="web.module.auth.LoginDenyHandler"></bean>
 </beans>

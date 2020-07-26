@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.mvc.community.domain.CT002Dto;
 import web.mvc.community.domain.CT002Param;
 import web.mvc.community.service.CT002Service;
+import web.module.date.dateController;
 
 import java.util.List;
 
@@ -16,10 +17,16 @@ public class CT002Controller {
 	@Autowired
 	CT002Service service;
 
+	@Autowired
+	private dateController dateFormat;
+
 	@RequestMapping("/CT002.do")
 	public String main(Model model, CT002Param param) {
-		List<CT002Dto> result = service.getFree(param);
-		model.addAttribute("freeList", result);
+		List<CT002Dto> free = service.getFree(param);
+		for(int i = 0; i<free.size(); i++) {
+			free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
+		}
+		model.addAttribute("freeList", free);
 		return "CT002";
 	}
 
