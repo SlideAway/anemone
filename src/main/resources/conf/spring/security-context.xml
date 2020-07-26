@@ -12,7 +12,7 @@
         <security:intercept-url pattern="/CT001.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')" />
 <!--        <security:intercept-url pattern="/US001.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')"/>-->
         <security:intercept-url pattern="/US*.do" access="hasAnyRole('ROLE_ADMIN', 'ROLE_MEMBER')"/>
-        <security:intercept-url pattern="/**" access="permitAll()" />
+        <security:intercept-url pattern="/resources/startbootstrap/vendor/fontawesome-free/less" access="permitAll()" />
         <security:csrf disabled="true"/>
         <security:form-login login-page="/CM003.do"
                              authentication-success-handler-ref="customLoginSuccess"

@@ -38,11 +38,11 @@
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
             <list>
-                <value>/WEB-INF/tiles/common.xml</value>
-                <value>/WEB-INF/tiles/community.xml</value>
-                <value>/WEB-INF/tiles/error.xml</value>
-                <value>/WEB-INF/tiles/movie.xml</value>
-                <value>/WEB-INF/tiles/user.xml</value>
+                <value>classpath:/conf/tiles/common.xml</value>
+                <value>classpath:/conf/tiles/communiy.xml</value>
+                <value>classpath:/conf/tiles/error.xml</value>
+                <value>classpath:/conf/tiles/movie.xml</value>
+                <value>classpath:/conf/tiles/user.xml</value>
             </list>
         </property>
     </bean>
