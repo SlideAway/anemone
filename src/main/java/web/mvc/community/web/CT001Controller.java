@@ -22,15 +22,15 @@ public class CT001Controller {
 
 	@RequestMapping("/CT001.do")
 	public String main(Model model, CT001Param param, @RequestParam(defaultValue = "1") int curPage) {
-		List<CT001Dto> noticeList = service.getNoticeList(param);
-		int listCnt = service.getCount(param);
-		dateController dateFormat = new dateController();
-		for(int i = 0; i<noticeList.size(); i++) {
-			noticeList.get(i).setRegDate(dateFormat.dateFmt(noticeList.get(i).getRegDate()));
-		}
-		//int count = service.getCount(param);
-		model.addAttribute("noticeList", noticeList);
-		//model.addAttribute("count", count);
+//		List<CT001Dto> noticeList = service.getNoticeList(param);
+//		int listCnt = service.getCount(param);
+//		dateController dateFormat = new dateController();
+//		for(int i = 0; i<noticeList.size(); i++) {
+//			noticeList.get(i).setRegDate(dateFormat.dateFmt(noticeList.get(i).getRegDate()));
+//		}
+//		//int count = service.getCount(param);
+//		model.addAttribute("noticeList", noticeList);
+//		//model.addAttribute("count", count);
 		return "CT001";
 	}
 

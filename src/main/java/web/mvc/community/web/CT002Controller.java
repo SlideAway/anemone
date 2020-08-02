@@ -22,11 +22,11 @@ public class CT002Controller {
 
 	@RequestMapping("/CT002.do")
 	public String main(Model model, CT002Param param) {
-		List<CT002Dto> free = service.getFree(param);
-		for(int i = 0; i<free.size(); i++) {
-			free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
-		}
-		model.addAttribute("freeList", free);
+//		List<CT002Dto> free = service.getFree(param);
+//		for(int i = 0; i<free.size(); i++) {
+//			free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
+//		}
+//		model.addAttribute("freeList", free);
 		return "CT002";
 	}
 

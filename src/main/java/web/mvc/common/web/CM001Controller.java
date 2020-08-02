@@ -24,14 +24,14 @@ public class CM001Controller {
 
     @RequestMapping("/CM001.do")
     public String main(Model model) {
-        List<CM001Dto> notice = service.getNotice();
-        List<CM001Dto> free = service.getFree();
-        for(int i = 0; i<notice.size(); i++) {
-            notice.get(i).setRegDate(dateFormat.dateFmt(notice.get(i).getRegDate()));
-            free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
-        }
-        model.addAttribute("notice", notice);
-        model.addAttribute("free", free);
+//        List<CM001Dto> notice = service.getNotice();
+//        List<CM001Dto> free = service.getFree();
+//        for(int i = 0; i<notice.size(); i++) {
+//            notice.get(i).setRegDate(dateFormat.dateFmt(notice.get(i).getRegDate()));
+//            free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
+//        }
+//        model.addAttribute("notice", notice);
+//        model.addAttribute("free", free);
         return "CM001";
     }
 }

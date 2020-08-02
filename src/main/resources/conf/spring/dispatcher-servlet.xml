@@ -39,7 +39,7 @@
         <property name="definitions">
             <list>
                 <value>classpath:/conf/tiles/common.xml</value>
-                <value>classpath:/conf/tiles/communiy.xml</value>
+                <value>classpath:/conf/tiles/community.xml</value>
                 <value>classpath:/conf/tiles/error.xml</value>
                 <value>classpath:/conf/tiles/movie.xml</value>
                 <value>classpath:/conf/tiles/user.xml</value>
