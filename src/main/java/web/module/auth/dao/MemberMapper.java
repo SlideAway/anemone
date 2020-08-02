@@ -5,4 +5,5 @@ import web.module.auth.domain.MemberVO;
 
 public interface MemberMapper {
 	public MemberVO read(@Param("username") String username);
+	public int logUserHis(MemberVO vo);
 }

@@ -2,6 +2,7 @@ package web.mvc.community.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.transaction.annotation.Transactional;
 import web.mvc.community.dao.CT001Dao;
 import web.mvc.community.domain.CT001Dto;
 import web.mvc.community.domain.CT001Param;
@@ -19,6 +20,7 @@ public class CT001Service {
 	public int getCount(CT001Param param) {
 		return dao.getCount(param);
 	}
+	@Transactional
 	public void save(CT001Param param) {
 		dao.saveNotice(param);
 	}

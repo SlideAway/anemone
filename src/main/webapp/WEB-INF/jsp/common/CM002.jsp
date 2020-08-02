@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="/WEB-INF/views/common/common.jsp" %>
+<%@ include file="/WEB-INF/jsp/common/common.jsp" %>
 
 <script src="${CR}/resources/weblb/js/common/CM002.js"></script>
 
@@ -11,15 +11,12 @@
             <div class="col-lg-5 d-none d-lg-block bg-login-image"></div>
             <div class="col-lg-7">
                 <div class="p-5">
-                    <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
-                    </div>
                     <form class="user">
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-user" id="userNm" placeholder="Enter your name...">
+                            <input type="text" class="form-control form-control-user" id="userNm" name="userNm" placeholder="Enter your name...">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-user" id="userId" placeholder="Nickname">
+                            <input type="text" class="form-control form-control-user" id="userId" name="userId" placeholder="Nickname">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
@@ -30,18 +27,18 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-user" id="Email" placeholder="Email Address">
+                            <input type="email" class="form-control form-control-user" id="Email" name="email" placeholder="Email Address">
                         </div>
                         <a href="#" onclick="doSubmit($('form'));" class="btn btn-primary btn-user btn-block">
                             Register Account
                         </a>
-                        <hr>
+                        <!--<hr>
                         <a href="#" class="btn btn-google btn-user btn-block">
                             <i class="fab fa-google fa-fw"></i> Register with Google
                         </a>
                         <a href="#" class="btn btn-facebook btn-user btn-block">
                             <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                        </a>
+                        </a>-->
                     </form>
                     <hr>
                     <div class="text-center">

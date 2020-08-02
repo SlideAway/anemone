@@ -12,7 +12,7 @@ import web.module.auth.domain.MemberVO;
 
 @Log4j
 public class userDetailsService implements UserDetailsService {
-	@Setter(onMethod_ = {@Autowired})
+	//@Setter(onMethod_ = {@Autowired})
 	private MemberMapper memberMapper;
 
 	@Override

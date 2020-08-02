@@ -18,9 +18,6 @@ public class CM002Controller {
     @Autowired
     CM002Service service;
 
-    @Autowired
-    BCryptPasswordEncoder pwdEncoder;
-
     @RequestMapping("/CM002.do")
     public String main() {
         return "CM002";
@@ -33,7 +30,7 @@ public class CM002Controller {
 
     @RequestMapping("/CM002_SAVE.do")
     public String saveUser(CM002Param param) {
-        param.setUserPwd(pwdEncoder.encode(param.getUserPwd()));
+
         param.setUserRole("100");
         service.save(param);
         return "redirect:CM001.do";
