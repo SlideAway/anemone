@@ -4,38 +4,38 @@
 
 <tiles-definitions>
     <!--기본 레이아웃 -->
-    <definition name="DEFAULT"      template="/WEB-INF/views/common/layoutDefault.jsp">
-        <put-attribute name="top"       value="/WEB-INF/views/common/commonTop.jsp"/>
-        <put-attribute name="sidebar"      value="/WEB-INF/views/common/commonmenu.jsp"/>
+    <definition name="DEFAULT"      template="/WEB-INF/jsp/common/layoutDefault.jsp">
+        <put-attribute name="top"       value="/WEB-INF/jsp/common/commonTop.jsp"/>
+        <put-attribute name="sidebar"      value="/WEB-INF/jsp/common/commonmenu.jsp"/>
     </definition>
 
     <definition name="CM001" extends="DEFAULT">
         <put-attribute name="title"    value=""/>
-        <put-attribute name="contents" value="/WEB-INF/views/common/CM001.jsp"/>
+        <put-attribute name="contents" value="/WEB-INF/jsp/common/CM001.jsp"/>
     </definition>
 
     <definition name="CM002" extends="DEFAULT">
         <put-attribute name="title"     value="회원가입"/>
-        <put-attribute name="contents"  value="/WEB-INF/views/common/CM002.jsp"/>
+        <put-attribute name="contents"  value="/WEB-INF/jsp/common/CM002.jsp"/>
     </definition>
 
     <definition name="CM003" extends="DEFAULT">
         <put-attribute name="title"     value="로그인"/>
-        <put-attribute name="contents"  value="/WEB-INF/views/common/CM003.jsp"/>
+        <put-attribute name="contents"  value="/WEB-INF/jsp/common/CM003.jsp"/>
     </definition>
 
     <definition name="CM003ID" extends="DEFAULT">
         <put-attribute name="title" value="ID 찾기"/>
-        <put-attribute name="contents" value="/WEB-INF/views/common/CM003ID.jsp"/>
+        <put-attribute name="contents" value="/WEB-INF/jsp/common/CM003ID.jsp"/>
     </definition>
 
     <definition name="CM003Pass" extends="DEFAULT">
         <put-attribute name="title" value="Password 찾기"/>
-        <put-attribute name="contents" value="/WEB-INF/views/common/CM003Pass.jsp"/>
+        <put-attribute name="contents" value="/WEB-INF/jsp/common/CM003Pass.jsp"/>
     </definition>
     <definition name="CM003Logout" extends="DEFAULT">
         <put-attribute name="title" value="로그아웃"/>
-        <put-attribute name="contents" value="/WEB-INF/views/common/CM003Logout.jsp"/>
+        <put-attribute name="contents" value="/WEB-INF/jsp/common/CM003Logout.jsp"/>
     </definition>
 
 </tiles-definitions>

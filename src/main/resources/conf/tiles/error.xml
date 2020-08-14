@@ -5,11 +5,11 @@
 <tiles-definitions>
     <definition name="404Error" extends="DEFAULT">
         <put-attribute name="title" value=""/>
-        <put-attribute name="contents" value="/WEB-INF/views/error/404Error.jsp"/>
+        <put-attribute name="contents" value="/WEB-INF/jsp/error/404Error.jsp"/>
     </definition>
 
     <definition name="500Error" extends="DEFAULT">
         <put-attribute name="title" value=""/>
-        <put-attribute name="contents" value="/WEB-INF/views/error/500Error.jsp"/>
+        <put-attribute name="contents" value="/WEB-INF/jsp/error/500Error.jsp"/>
     </definition>
 </tiles-definitions>
