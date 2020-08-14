@@ -8,9 +8,9 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/CM001.do">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <i class="fas fa-fighter-jet"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Karma</div>
+        <div class="sidebar-brand-text mx-3">Anemone</div>
     </a>
 
     <!-- Divider -->
@@ -128,7 +128,7 @@
             <i class="fas fa-fw fa-file"></i>
             <span>Tables</span></a>
     </li>
-    <sec:authorize access="isAnonymous()">
+    <sec:authorize access="hasRole('100')">
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages3" aria-expanded="true" aria-controls="collapsePages3">
                 <i class="fas fa-fw fa-folder"></i>

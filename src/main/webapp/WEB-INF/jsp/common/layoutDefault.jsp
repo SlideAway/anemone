@@ -16,11 +16,17 @@
         <div id="content">
             <tiles:insertAttribute name="top"/>
             <section class="content-header" style="padding: 10px;">
-                <div class="container">
-                <h1><tiles:insertAttribute name="title"/></h1>
-                <section class="content" style="padding: 10px;">
-                    <tiles:insertAttribute name="contents"/>
-                </section>
+                <div class="col-xl-12">
+                    <div class="card shadow mb4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary"><tiles:insertAttribute name="title"/></h6>
+                            <div class="card-body">
+                                <section class="content" style="padding: 10px;">
+                                    <tiles:insertAttribute name="contents"/>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -39,7 +45,6 @@
 
 <!-- Page level plugins -->
 <script src="${CR}/resources/startbootstrap/vendor/chart.js/Chart.min.js"></script>
-
 
 
 </body>

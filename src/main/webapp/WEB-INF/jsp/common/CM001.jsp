@@ -11,36 +11,41 @@
             <div class="card-header py-3">
                 <div class="row">
                     <div class="col-lg-6 mb-4">
-                        <h6 class="m-0 font-weight-bold text-primary">Notice</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">BoxOffice</h6>
                     </div>
                     <div class="col-lg-6 mb-4">
                         <h6 class="m-0 font-weight-bold text-primary" style="text-align: right;"><a
-                                href="/CT001.do">더보기</a></h6>
+                                href="/MV001.do">더보기</a></h6>
                     </div>
                 </div>
             </div>
             <div class="card-body">
-                <!--
-                <c:forEach var="notice" items="${notice}" varStatus="status">
-                    <div class="card shadow mb-4" onclick="doViewNotice(${notice.boardSeq});">
-                        <div class="card-header py-3">
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <h6 class="m-0 font-weight-bold text-primary">${notice.title}</h6>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <h6 class="m-0 font-weight-bold text-primary"
-                                        style="text-align: right;">${notice.regDate}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>${notice.content}</p>
-                            <p>작성자 : ${notice.nickname}</p>
-                        </div>
-                    </div>
-                </c:forEach>
-                -->
+                <table class="table table-striped table-hover">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="35%">
+                        <col width="20%">
+                        <col width="15%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">순위</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">개봉일</th>
+                        <th scope="col">점유율</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="i" begin="0" end="9">
+                        <tr>
+                            <td scope="row">${boxOffice.boxOfficeResult.dailyBoxOfficeList[i].rank}위</td>
+                            <td>${boxOffice.boxOfficeResult.dailyBoxOfficeList[i].movieNm}</td>
+                            <td>${boxOffice.boxOfficeResult.dailyBoxOfficeList[i].openDt}</td>
+                            <td>${boxOffice.boxOfficeResult.dailyBoxOfficeList[i].salesShare}%</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -49,36 +54,16 @@
             <div class="card-header py-3">
                 <div class="row">
                     <div class="col-lg-6 mb-4">
-                        <h6 class="m-0 font-weight-bold text-primary">Free Board</h6>
+                        <h6 class="m-0 font-weight-bold text-primary"></h6>
                     </div>
                     <div class="col-lg-6 mb-4">
                         <h6 class="m-0 font-weight-bold text-primary" style="text-align: right;"><a
-                                href="/CT001.do">더보기</a></h6>
+                                href="#">더보기</a></h6>
                     </div>
                 </div>
             </div>
             <div class="card-body">
-                <!--
-                <c:forEach var="free" items="${free}" varStatus="status">
-                    <div class="card shadow mb-4" onclick="doViewNotice(${free.boardSeq});">
-                        <div class="card-header py-3">
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <h6 class="m-0 font-weight-bold text-primary">${free.title}</h6>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <h6 class="m-0 font-weight-bold text-primary"
-                                        style="text-align: right;">${free.regDate}</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>${free.content}</p>
-                            <p>작성자 : ${free.nickname}</p>
-                        </div>
-                    </div>
-                </c:forEach>
-                -->
+              <!-- Contents -->
             </div>
         </div>
     </div>

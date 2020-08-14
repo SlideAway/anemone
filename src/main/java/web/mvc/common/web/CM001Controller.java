@@ -5,11 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
-import java.util.List;
+import web.mvc.movie.service.MV001Service;
 
-import web.mvc.common.domain.CM001Dto;
 import web.mvc.common.service.CM001Service;
 import web.module.date.dateController;
+
+import java.util.HashMap;
 
 
 @Controller
@@ -21,17 +22,13 @@ public class CM001Controller {
     @Autowired
     private dateController dateFormat;
 
+    @Autowired
+    private MV001Service MV001service;
 
     @RequestMapping("/CM001.do")
-    public String main(Model model) {
-//        List<CM001Dto> notice = service.getNotice();
-//        List<CM001Dto> free = service.getFree();
-//        for(int i = 0; i<notice.size(); i++) {
-//            notice.get(i).setRegDate(dateFormat.dateFmt(notice.get(i).getRegDate()));
-//            free.get(i).setRegDate(dateFormat.dateFmt(free.get(i).getRegDate()));
-//        }
-//        model.addAttribute("notice", notice);
-//        model.addAttribute("free", free);
+    public String main(Model model) throws Exception{
+        HashMap<Object, String> boxOffice = MV001service.getBox();
+        model.addAttribute("boxOffice", boxOffice);
         return "CM001";
     }
 }
