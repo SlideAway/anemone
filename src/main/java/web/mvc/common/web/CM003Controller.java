@@ -66,11 +66,11 @@ public class CM003Controller {
 	}
 	@RequestMapping("/CM003_FINDPASS.do")
 	public String findPass() {
-		return "CM003Pass";
+		return "CM003PASS";
 	}
 
 	@RequestMapping("/CM003_LOGOUT.do")
 	public String logout() {
-		return "CM003Logout";
+		return "CM003LOGOUT";
 	}
 }

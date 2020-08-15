@@ -36,4 +36,9 @@ public class CT002Controller {
 		model.addAttribute("detail", result);
 		return "CT002DETAIL";
 	}
+
+	@RequestMapping("/CT002_INS.do")
+	public String insert(Model model, long contentSeq) {
+		return "CT002INS";
+	}
 }

@@ -9,24 +9,30 @@
         <put-attribute name="contents"  value="/WEB-INF/jsp/community/CT001.jsp"/>
     </definition>
 
+    <!-- CT001DETAIL - 공지사항 상세보기 -->
     <definition name="CT001DETAIL" extends="DEFAULT">
         <put-attribute name="title"     value="공지사항 상세보기"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/community/CT001Detail.jsp"/>
     </definition>
 
-    <definition name="CT001_INS" extends="DEFAULT">
+    <!--CT001INS - 공지사항 글쓰기 -->
+    <definition name="CT001INS" extends="DEFAULT">
         <put-attribute name="title"     value="공지사항 글쓰기"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/community/CT001Ins.jsp"/>
     </definition>
 
+    <!-- CT002 - 자유게시판 -->
     <definition name="CT002" extends="DEFAULT">
         <put-attribute name="title"     value="자유게시판"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/community/CT002.jsp"/>
     </definition>
 
+    <!-- CT002DETAIL - 자유게시판 상세보기-->
     <definition name="CT002DETAIL" extends="DEFAULT">
         <put-attribute name="title"     value="자유게시판 상세보기"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/community/CT002Detail.jsp"/>
     </definition>
+
+    <!--CT002INS - 자유게시판 글쓰기 -->
 
 </tiles-definitions>

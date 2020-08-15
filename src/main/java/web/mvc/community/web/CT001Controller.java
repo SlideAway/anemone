@@ -43,7 +43,7 @@ public class CT001Controller {
 
 	@RequestMapping("/CT001_INS.do")
 	public String insert(Model model, Principal auth) {
-		return "CT001_INS";
+		return "CT001INS";
 	}
 
 	@RequestMapping("/CT001_SAVE.do")

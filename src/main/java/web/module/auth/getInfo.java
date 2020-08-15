@@ -6,6 +6,8 @@ import web.module.auth.domain.CustomUser;
 import web.module.auth.domain.MemberVO;
 import web.module.date.dateController;
 
+import java.lang.reflect.Member;
+
 public class getInfo {
 	public JSONObject get(MemberVO vo) {
 		dateController date = new dateController();
