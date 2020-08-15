@@ -11,5 +11,6 @@
         <package name="web.mvc.community.domain"/>
         <package name="web.mvc.movie.domain"/>
         <package name="web.mvc.user.domain"/>
+        <package name="web.mvc.manage.domain"/>
     </typeAliases>
 </configuration>

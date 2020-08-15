@@ -3,6 +3,7 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!-- CT001 - 공지사항 -->
     <definition name="CT001" extends="DEFAULT">
         <put-attribute name="title"     value="공지사항"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/community/CT001.jsp"/>

@@ -3,11 +3,13 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!-- 404Error - 404 에러페이지 -->
     <definition name="404Error" extends="DEFAULT">
         <put-attribute name="title" value=""/>
         <put-attribute name="contents" value="/WEB-INF/jsp/error/404Error.jsp"/>
     </definition>
 
+    <!-- 500Error - 500 에러페이지 -->
     <definition name="500Error" extends="DEFAULT">
         <put-attribute name="title" value=""/>
         <put-attribute name="contents" value="/WEB-INF/jsp/error/500Error.jsp"/>

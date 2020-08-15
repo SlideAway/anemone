@@ -1,0 +1,4 @@
+DROP FUNCTION IF EXISTS create_seq()
+
+CREATE FUNCTION createSeq() RETURN INT
+    BEGIN

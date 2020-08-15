@@ -3,14 +3,19 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!-- US001 - 마이페이지 -->
     <definition name="US001" extends="DEFAULT">
         <put-attribute name="title" value="마이페이지"/>
         <put-attribute name="contents" value="/WEB-INF/jsp/user/US001.jsp"/>
     </definition>
+
+    <!-- US002 - 비밀번호 재확인 -->
     <definition name="US002" extends="DEFAULT">
-        <put-attribute name="title" value="비밀번호 확인"/>
+        <put-attribute name="title" value="비밀번호 재확인"/>
         <put-attribute name="contents" value="/WEB-INF/jsp/user/US002.jsp"/>
     </definition>
+
+    <!--US003 - 사용자 정보수정 -->
     <definition name="US002_CHANGE" extends="DEFAULT">
         <put-attribute name="title" value="정보 수정"/>
         <put-attribute name="contents" value="/WEB-INF/jsp/user/US002chg.jsp"/>

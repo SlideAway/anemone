@@ -3,6 +3,7 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!-- MV001 - 박스오피스 -->
     <definition name="MV001" extends="DEFAULT">
         <put-attribute name="title" value="박스오피스"/>
         <put-attribute name="contents" value="/WEB-INF/jsp/movie/MV001.jsp"/>
