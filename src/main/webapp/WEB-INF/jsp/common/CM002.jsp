@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/common/common.jsp" %>
 
-<script src="${CR}/resources/weblb/js/common/CM002.js"></script>
+<script src="${CR}/weblb/js/common/CM002.js"></script>
 
 <div class="container">
 <div class="card o-hidden border-0 shadow-lg my-5">

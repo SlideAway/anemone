@@ -37,4 +37,4 @@
 
 
 <%--Custom Lib--%>
-<script src="${CR}/resources/weblb/js/common/common.js"></script>
+<script src="${CR}/weblb/js/common/common.js"></script>

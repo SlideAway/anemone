@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/common/common.jsp" %>
 
-<script src="${CR}/resources/weblb/js/movie/MV001.js"></script>
+<script src="${CR}/weblb/js/movie/MV001.js"></script>
 
 
 <table class="table table-striped table-hover">

@@ -7,7 +7,6 @@ import java.util.HashMap;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.or.kobis.kobisopenapi.consumer.rest.KobisOpenAPIRestService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class MV001Service {
 

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/jsp/common/common.jsp" %>
 
-<script src="${CR}/resources/weblb/js/community/ER002.js"></script>
+<script src="${CR}/weblb/js/community/ER002.js"></script>
 
 
 <div class="text-center">
