@@ -65,3 +65,10 @@ CREATE TABLE seq_code (
     PRIMARY KEY(seq_code)
 );
 
+CREATE TABLE mesg_noti (
+    mesg_seq    BIGINT          NOT NULL,   --메시지 고유번호
+    src_seq     BIGINT          NOT NULL,   --송신자 순번
+    dest_seq    BIGINT          NOT NULL,   --수신자 순번
+    contents    TEXT            NOT NULL,   --내용
+    read_yn     varchar(1)      NOT NULL    --열람 여부
+)
