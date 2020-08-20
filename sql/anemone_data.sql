@@ -1,6 +1,6 @@
 --user_info : 사용자 정보
-INSERT INTO user_info VALUES (1, 'anemone', '시스템관리자', '36E397C2E58EAF3F00FF161C24A222B79ADD9D4F7E454DF4588AA294B241F65C3411C8F209305E925732738EDBE225DF7B37AC12CA6586B29FA4DD8E2B95314B', 'R00', 'gkszm636@gmail.com', to_char(now(), 'yyyymmdd'), '', 'Y');
-INSERT INTO user_info VALUES (2, 'admin', '사이트 관리자', '36E397C2E58EAF3F00FF161C24A222B79ADD9D4F7E454DF4588AA294B241F65C3411C8F209305E925732738EDBE225DF7B37AC12CA6586B29FA4DD8E2B95314B', 'R01', 'gkszm636@gmail.com', to_char(now(), 'yyyymmdd'), '', 'Y');
+INSERT INTO user_info VALUES (1, 'anemone', '시스템관리자', '$2a$10$5ft5gi7x82mxHhWKl.Mr8OsHc/sY8U5QHp680vNfoEicSJOr2nDkK', 'R00', 'gkszm636@gmail.com', to_char(now(), 'yyyymmdd'), '', 'Y');
+INSERT INTO user_info VALUES (2, 'admin', '사이트 관리자', '$2a$10$5ft5gi7x82mxHhWKl.Mr8OsHc/sY8U5QHp680vNfoEicSJOr2nDkK', 'R01', 'gkszm636@gmail.com', to_char(now(), 'yyyymmdd'), '', 'Y');
 
 --role_info : 권한 정보
 INSERT INTO role_info VALUES('R00', '시스템관리자', '', 'R00');

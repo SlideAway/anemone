@@ -1,22 +1,23 @@
 package web.mvc.common.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import web.mvc.common.domain.CM002Dto;
+import web.module.auth.passwordEncoder;
 import web.mvc.common.domain.CM002Param;
 import web.mvc.common.service.CM002Service;
 
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class CM002Controller {
 
 
     @Autowired
-    CM002Service service;
+    private CM002Service service;
+
+    @Autowired
+    private passwordEncoder encoder;
 
     @RequestMapping("/CM002.do")
     public String main() {
@@ -30,8 +31,8 @@ public class CM002Controller {
 
     @RequestMapping("/CM002_SAVE.do")
     public String saveUser(CM002Param param) {
-
-        param.setUserRole("100");
+        param.setUserPwd(encoder.encode(param.getUserPwd()));
+        param.setUserRole("R99");
         service.save(param);
         return "redirect:CM001.do";
     }

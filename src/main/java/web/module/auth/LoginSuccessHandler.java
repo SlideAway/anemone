@@ -2,6 +2,7 @@ package web.module.auth;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import web.module.auth.domain.MemberVO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,13 +20,13 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 			roleNames.add(authority.getAuthority());
 		});
 
-		if(roleNames.contains("ROLE_ADMIN")) {
+		if(roleNames.contains("R00") || roleNames.contains("R01")) {
 			response.sendRedirect(request.getContextPath() + "/CM003_LOGIN.do?error=0");
-//			response.sendRedirect("/US001.do");
+			//response.sendRedirect("/US001.do");
 		}
-		if(roleNames.contains("ROLE_MEMBER")) {
+		if(roleNames.contains("R99")) {
 			response.sendRedirect(request.getContextPath() + "/CM003_LOGIN.do?error=0");
-//			response.sendRedirect("/US001.do");
+			//response.sendRedirect("/US001.do");
 		}
 	}
 }

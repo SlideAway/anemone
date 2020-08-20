@@ -3,6 +3,7 @@ package web.mvc.common.web;
 import lombok.extern.log4j.Log4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,9 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.springframework.web.servlet.ModelAndView;
+import web.module.auth.domain.CustomUser;
 import web.mvc.common.domain.CM003Dto;
 import web.mvc.common.service.CM003Service;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -27,10 +31,11 @@ public class CM003Controller {
 		return "CM003";
 	}
 	@RequestMapping("/CM003_LOGIN.do")
-	public @ResponseBody JSONObject login(String error, HttpSession session) {
+	public @ResponseBody JSONObject login(String error, CM003Dto dto, Model model) {
 		JSONObject res = new JSONObject();
 		if(Integer.parseInt(error) == 0) {
 			res.put("success", true);
+
 			return res;
 		} else if(Integer.parseInt(error) == 1) {
 			res.put("success", false);

@@ -8,7 +8,6 @@ public class CM002Param {
     private String  userNm;
     private String  userId;
     private String  userPwd;
-    private String  nickName;
     private String  userRole;
     private String  email;
 
@@ -44,14 +43,6 @@ public class CM002Param {
 
     public void setUserId(String userId) {
         this.userId = userId;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
     }
 
     public String getEmail() {

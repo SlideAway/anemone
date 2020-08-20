@@ -2,17 +2,21 @@ package web.mvc.common.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import web.module.auth.domain.CustomUser;
+import web.module.auth.domain.MemberVO;
 
 import java.util.Date;
 
-public class CM003Dto {
+public class CM003Dto  {
 	private long userSeq;
 	private String userId;
 	private String userPwd;
 	private String userNm;
 	private String nickname;
 	private String email;
-	private Date regDate;
+	private String regDate;
+
+	private MemberVO userInfo;
 
 	@JsonSerialize(using = ToStringSerializer.class)
 	public long getUserSeq() {
@@ -55,11 +59,11 @@ public class CM003Dto {
 		this.nickname = nickname;
 	}
 
-	public Date getRegDate() {
+	public String getRegDate() {
 		return regDate;
 	}
 
-	public void setRegDate(Date regDate) {
+	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
 
@@ -69,5 +73,12 @@ public class CM003Dto {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public MemberVO getUserInfo() {
+		return userInfo;
+	}
+
+	public void setUserInfo(MemberVO userInfo) {
+		this.userInfo = userInfo;
 	}
 }

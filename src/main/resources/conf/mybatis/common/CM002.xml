@@ -3,13 +3,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="web.mvc.common.dao.CM002Dao">
     <select id="get" resultType="int">
-        select count(*) from tbl_user_info
+        select count(*) from user_info
         <where>
             <if test="userId != null">
                 user_id = #{userId}
-            </if>
-            <if test="nickName != null">
-                user_nickname = #{nickName}
             </if>
         </where>
     </select>
@@ -17,26 +14,26 @@
 
     <insert id="save">
         <selectKey resultType="long" keyProperty="userSeq" order="BEFORE">
-            select MAX(user_seq)+1 from tbl_user_info
+            select createseq('user_info')
         </selectKey>
-        insert into tbl_user_info(
+        insert into user_info(
             user_seq,
             user_id,
             user_nm,
             user_pwd,
             user_role,
-            user_nickname,
             email,
-            reg_date
+            reg_date,
+            use_yn
         ) values(
             #{userSeq},
             #{userId},
             #{userNm},
-            #{encPwd},
+            #{userPwd},
             #{userRole},
-            #{nickname},
             #{email},
-            to_char(now(), 'YYYYMMDDHH24MISS')
+            to_char(now(), 'YYYYMMDDHH24MISS'),
+            'y'
         )
     </insert>
 

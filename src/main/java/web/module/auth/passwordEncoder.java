@@ -18,6 +18,6 @@ public class passwordEncoder implements PasswordEncoder {
 
 	@Override
 	public boolean matches(CharSequence rawPassword, String encodedPassword) {
-		return rawPassword.toString().matches(encodedPassword);
+		return encoder.matches(rawPassword, encodedPassword);
 	}
 }

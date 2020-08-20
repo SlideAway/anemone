@@ -4,7 +4,7 @@
 <mapper namespace="web.mvc.common.dao.CM003Dao">
     <select id="findId" resultType="CM003Dto">
         select user_id as userId
-        from tbl_user_info
+        from user_info
         <where>
             user_nm = #{userNm} and email = #{email}
         </where>

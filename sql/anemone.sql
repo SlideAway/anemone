@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS seq_code   CASCADE;
 CREATE TABLE user_info (
     user_seq  BIGINT                ,  --사용자 순번
     user_id   VARCHAR(12)   NOT NULL,  --사용자 ID
-    user_nm   VARCHAR(5)    NOT NULL,  --사용자 이름
+    user_nm   VARCHAR(10)    NOT NULL,  --사용자 이름
     user_pwd  TEXT          NOT NULL,  --사용자 비밀번호
     user_role VARCHAR(10)   NOT NULL,  --사용자 권한
     email     VARCHAR(64)   NOT NULL,  --사용자 이메일

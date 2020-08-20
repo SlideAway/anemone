@@ -4,24 +4,24 @@
 <mapper namespace="web.mvc.common.dao.CM001Dao">
     <select id="getNotice" resultType="CM001Dto">
         select
-    		 a.notice_seq		as	boardSeq
+    		 a.board_seq		as	boardSeq
 	    	,a.title 			as 	title
 		    ,a.content			as	content
     		,a.reg_date			as	regDate
-	    	,b.user_nickname	as	nickname
-        from tbl_notice_board a
-        left outer join tbl_user_info b on a.reg_user = b.user_seq
+	    	,b.user_nm      	as	userNm
+        from board_info a
+        left outer join user_info b on a.writer = b.user_seq
         limit 5
     </select>
     <select id="getFree" resultType="CM001Dto">
         select
-    		 a.free_seq		as	boardSeq
+    		 a.board_seq		as	boardSeq
 	    	,a.title 			as 	title
 		    ,a.content			as	content
     		,a.reg_date			as	regDate
-	    	,b.user_nickname	as	nickname
-        from tbl_free_board a
-        left outer join tbl_user_info b on a.reg_user = b.user_seq
+	    	,b.user_nm  	    as	userNm
+        from board_info a
+        left outer join user_info b on a.writer = b.user_seq
         limit 5
     </select>
 </mapper>

@@ -3,12 +3,15 @@ package web.module.auth.domain;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.List;
 
 @Data
-public class MemberVO implements Serializable {
+public class MemberVO implements UserDetails {
 	private long userSeq;
 	private String userId;
 	private String userNm;
@@ -20,6 +23,8 @@ public class MemberVO implements Serializable {
 
 	private String regDate;
 	private List<AuthVO> authList;
+
+	private List<GrantedAuthority> authorities;
 
 	@JsonSerialize(using = ToStringSerializer.class)
 	public long getUserSeq() {
@@ -54,12 +59,38 @@ public class MemberVO implements Serializable {
 		this.nickname = nickname;
 	}
 
-	public boolean isEnabled() {
-		return enabled;
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return authorities;
 	}
 
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
+	@Override
+	public String getPassword() {
+		return userPwd;
+	}
+
+	@Override
+	public String getUsername() {
+		return userId;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+	@Override
+	public boolean isEnabled() {
+		return true;
 	}
 
 	public String getRegDate() {

@@ -30,13 +30,13 @@
                 ,a.email            as email
                 ,b.role_nm          as roleNm
                 ,auth               as auth
-                ,a.user_nickname    as nickname
                 ,a.reg_date         as regDate
 
-        from            tbl_user_info a
-        left outer join tbl_role_info b on a.user_role = b.role_cd
+        from            user_info a
+        left outer join role_info b on a.user_role = b.role_cd
         <where>
             a.user_id = #{username}
+            and use_yn = 'Y'
         </where>
     </select>
 </mapper>
