@@ -14,7 +14,6 @@ public class getInfo {
 		JSONObject json = new JSONObject();
 		json.put("userId", vo.getUserId());
 		json.put("userNm", vo.getUserNm());
-		json.put("nickname", vo.getNickname());
 		json.put("roleNm", vo.getRoleNm());
 		json.put("email", vo.getEmail());
 		json.put("regDate", date.dateFmt(vo.getRegDate()));

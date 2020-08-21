@@ -19,6 +19,7 @@ CREATE TABLE user_info (
     email     VARCHAR(64)   NOT NULL,  --사용자 이메일
     reg_date  VARCHAR(14)   NOT NULL,  --사용자 가입 날짜
     exit_date VARCHAR(14)   NULL,      --사용자 탈퇴 날짜
+    thumb     TEXT          NULL,      --사용자 프로필 사진
     use_yn    VARCHAR(1)    NOT NULL,  --탈퇴 여부
     PRIMARY KEY(user_seq)
 );
@@ -65,10 +66,16 @@ CREATE TABLE seq_code (
     PRIMARY KEY(seq_code)
 );
 
+--메시지 알림 테이블
 CREATE TABLE mesg_noti (
     mesg_seq    BIGINT          NOT NULL,   --메시지 고유번호
     src_seq     BIGINT          NOT NULL,   --송신자 순번
     dest_seq    BIGINT          NOT NULL,   --수신자 순번
     contents    TEXT            NOT NULL,   --내용
     read_yn     varchar(1)      NOT NULL    --열람 여부
-)
+);
+/*
+CREATE TABLE alert_noti (
+    alert_seq   BIGINT          NOT NULL,
+
+)*/

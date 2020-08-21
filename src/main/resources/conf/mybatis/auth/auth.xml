@@ -10,6 +10,7 @@
         <result property="userPwd"  column="userPwd"/>
         <result property="userNm"   column="userNm"/>
         <result property="nickname" column="nickname"/>
+        <result property="role"     column="role"/>
         <result property="roleNm"   column="roleNm"/>
         <result property="email"    column="email"/>
         <result property="regDate"  column="regDate"/>
@@ -28,8 +29,10 @@
                 ,a.user_nm          as userNm
                 ,a.user_pwd         as userPwd
                 ,a.email            as email
+                ,a.user_role        as role
                 ,b.role_nm          as roleNm
-                ,auth               as auth
+                ,a.user_role        as auth
+                ,a.thumb            as thumb
                 ,a.reg_date         as regDate
 
         from            user_info a

@@ -35,3 +35,4 @@
 
 <%--Custom Lib--%>
 <script src="${CR}/weblb/js/common/common.js"></script>
+<link rel="stylesheet" type="text/css" href="${CR}/weblb/css/main.css">

@@ -1,8 +1,6 @@
 function doSearch(keyword) {
 }
-function getAuth() {
 
-}
-function getGrade() {
-
+function doLogout() {
+    location.href = getContextPath() + "/CM003_LOGOUT.do";
 }

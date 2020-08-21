@@ -18,6 +18,7 @@ import web.mvc.common.service.CM003Service;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 
 @Controller
 @Log4j
@@ -27,27 +28,12 @@ public class CM003Controller {
 
 
 	@RequestMapping("/CM003.do")
-	public String main() {
+	public String main(Model model, String error) {
+		if(error != null) {
+			model.addAttribute("error", true);
+		}
 		return "CM003";
 	}
-	@RequestMapping("/CM003_LOGIN.do")
-	public @ResponseBody JSONObject login(String error, CM003Dto dto, Model model) {
-		JSONObject res = new JSONObject();
-		if(Integer.parseInt(error) == 0) {
-			res.put("success", true);
-
-			return res;
-		} else if(Integer.parseInt(error) == 1) {
-			res.put("success", false);
-			res.put("msg", "ID 또는 패스워드가 일치하지 않습니다. ");
-			return res;
-		}
-		return res;
-	}
-
-//	public @ResponseBody boolean wrongPass() {
-//		return false;
-//	}
 
 	@RequestMapping("/CM003_FINDID.do")
 	public String findId() {
@@ -74,8 +60,8 @@ public class CM003Controller {
 		return "CM003PASS";
 	}
 
-	@RequestMapping("/CM003_LOGOUT.do")
-	public String logout() {
-		return "CM003LOGOUT";
-	}
+//	@RequestMapping("/CM003_LOGOUT.do")
+//	public String logout() {
+//		return "CM003LOGOUT";
+//	}
 }

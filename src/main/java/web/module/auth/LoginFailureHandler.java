@@ -19,7 +19,7 @@ public class LoginFailureHandler implements AuthenticationFailureHandler {
 			BadCredentialException : 비밀번호 불일치시
 			InternalAuthenticationServiceException : 존재하지 않는 ID 존재 시
 			*/
-			response.sendRedirect(request.getContextPath() + "/CM003_LOGIN.do?error=1");
+			response.sendRedirect(request.getContextPath() + "/CM003.do?error=");
 		}
 	}
 }

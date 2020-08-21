@@ -3,6 +3,8 @@
 
 <script src="${CR}/weblb/js/common/CM002.js"></script>
 
+<input type="button" onclick="">
+
 <div class="container">
 <div class="card o-hidden border-0 shadow-lg my-5">
     <div class="card-body p-0">

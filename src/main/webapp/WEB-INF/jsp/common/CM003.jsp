@@ -2,7 +2,14 @@
 <%@ include file="/WEB-INF/jsp/common/common.jsp" %>
 
 <script src="${CR}/weblb/js/common/CM003.js"></script>
-
+<script>
+    $(document).ready(function() {
+        var error = ${error};
+        if(error == true) {
+            JMLib.JMalert("ID 또는 패스워드가 일치하지 않습니다. ");
+        }
+    })
+</script>
 
 <div class="container">
 
@@ -21,12 +28,12 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                                <form class="user">
+                                <form class="user" action="CM003_LOGIN.do" method="post">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" id="username" aria-describedby="emailHelp" placeholder="Enter ID...">
+                                        <input type="email" class="form-control form-control-user" id="userId" name="userId" aria-describedby="emailHelp" placeholder="Enter ID...">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="userPwd" placeholder="Password">
+                                        <input type="password" class="form-control form-control-user" id="userPwd" name="userPwd" placeholder="Password">
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">

@@ -7,9 +7,10 @@
 <html>
 <head>
     <%@ include file="/WEB-INF/jsp/common/commonHead.jsp" %>
+    <script src="${CR}/resources/jquery3.4.1/jquery-3.4.1.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body id="page-top">
+<body id="page-top" class="sidebar-toggled">
 <div id="wrapper">
     <tiles:insertAttribute name="sidebar"></tiles:insertAttribute>
     <div id="content-wrapper" class="d-flex flex-column">
@@ -34,7 +35,8 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="${CR}/resources/startbootstrap/vendor/jquery/jquery.min.js"></script>
+<!--<script src="${CR}/resources/startbootstrap/vendor/jquery/jquery.min.js"></script>-->
+
 <script src="${CR}/resources/startbootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->

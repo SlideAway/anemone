@@ -7,7 +7,7 @@ import web.module.auth.domain.MemberVO;
 
 import java.util.Date;
 
-public class CM003Dto  {
+public class CM003Dto extends MemberVO {
 	private long userSeq;
 	private String userId;
 	private String userPwd;

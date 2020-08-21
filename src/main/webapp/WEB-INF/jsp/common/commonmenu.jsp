@@ -3,7 +3,7 @@
 
 <script src="${CR}/weblb/js/common/commonMenu.js"></script>
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/CM001.do">
@@ -15,13 +15,24 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
-
+    <sec:authorize access="hasAnyAuthority('R00', 'R01')">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseManage" aria-expanded="true" aria-controls="collapseBoard">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Manage</span>
+        </a>
+        <div id="collapseManage" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Custom Boards:</h6>
+                <a class="collapse-item" href="/MGR001.do">DashBoard</a>
+                <a class="collapse-item" href="/MGR002.do">Site Settings</a>
+                <a class="collapse-item" href="/MGR003.do">User Settings</a>
+                <a class="collapse-item" href="/MGR004.do">Tree Menu Settings</a>
+            </div>
+        </div>
     </li>
+    </sec:authorize>
 
     <!-- Divider -->
     <hr class="sidebar-divider">

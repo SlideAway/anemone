@@ -26,7 +26,7 @@ JMLib = {
             url : url,
             type : "POST",
             data : value,
-            dataType : "json",
+            dataType : "",
             success : sucHandler,
             error : function (req, textStatus, errorThrown) {
                 switch(req.status) {

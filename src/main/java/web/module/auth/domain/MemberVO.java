@@ -16,10 +16,12 @@ public class MemberVO implements UserDetails {
 	private String userId;
 	private String userNm;
 	private String userPwd;
-	private String nickname;
+	private String role;
 	private String roleNm;
 	private String email;
+	private String thumb;
 	private boolean enabled;
+
 
 	private String regDate;
 	private List<AuthVO> authList;
@@ -49,14 +51,6 @@ public class MemberVO implements UserDetails {
 
 	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
-	}
-
-	public String getNickname() {
-		return nickname;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
 	}
 
 	@Override
@@ -131,5 +125,21 @@ public class MemberVO implements UserDetails {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getThumb() {
+		return thumb;
+	}
+
+	public void setThumb(String thumb) {
+		this.thumb = thumb;
 	}
 }
