@@ -41,6 +41,8 @@
                 <value>/conf/tiles/common.xml</value>
                 <value>/conf/tiles/community.xml</value>
                 <value>/conf/tiles/error.xml</value>
+                <value>/conf/tiles/introduce.xml</value>
+                <value>/conf/tiles/manage.xml</value>
                 <value>/conf/tiles/movie.xml</value>
                 <value>/conf/tiles/user.xml</value>
             </list>

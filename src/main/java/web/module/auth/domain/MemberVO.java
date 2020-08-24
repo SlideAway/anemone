@@ -12,16 +12,20 @@ import java.util.List;
 
 @Data
 public class MemberVO implements UserDetails {
-	private long userSeq;
-	private String userId;
-	private String userNm;
-	private String userPwd;
-	private String role;
-	private String roleNm;
-	private String email;
-	private String thumb;
+	private long 	userSeq;
+	private long	connSeq;
+	private String 	userId;
+	private String 	userNm;
+	private String	 userPwd;
+	private String 	role;
+	private int		auth;
+	private String 	roleNm;
+	private String 	email;
+	private String 	thumb;
 	private boolean enabled;
-
+	private String	ipAddr;
+	private String	blockYn;
+	private String	blockInfo;
 
 	private String regDate;
 	private List<AuthVO> authList;
@@ -141,5 +145,45 @@ public class MemberVO implements UserDetails {
 
 	public void setThumb(String thumb) {
 		this.thumb = thumb;
+	}
+
+	public int getAuth() {
+		return auth;
+	}
+
+	public void setAuth(int auth) {
+		this.auth = auth;
+	}
+
+	public String getIpAddr() {
+		return ipAddr;
+	}
+
+	public void setIpAddr(String ipAddr) {
+		this.ipAddr = ipAddr;
+	}
+
+	public long getConnSeq() {
+		return connSeq;
+	}
+
+	public void setConnSeq(long connSeq) {
+		this.connSeq = connSeq;
+	}
+
+	public String getBlockYn() {
+		return blockYn;
+	}
+
+	public void setBlockYn(String blockYn) {
+		this.blockYn = blockYn;
+	}
+
+	public String getBlockInfo() {
+		return blockInfo;
+	}
+
+	public void setBlockInfo(String blockInfo) {
+		this.blockInfo = blockInfo;
 	}
 }

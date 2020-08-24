@@ -177,7 +177,7 @@
                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-black-50 small">${userInfo.userNm}</span>
                 <c:if test="${userInfo.thumb eq null}">
-                <img class="img-profile rounded-circle" src="${CR}/resources/img/avatar/user-solid.svg">
+                    <i class="fas fa-3x fa-user-circle" style="color:black;"></i>
                 </c:if>
             </a>
             <!-- Dropdown - User Information -->
@@ -187,7 +187,7 @@
                     Profile
                 </a>
                 <a class="dropdown-item" href="/US003.do">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <i class="fas fa-user-cog fa-sm fa-fw mr-2 text-gray-400"></i>
                     Settings
                 </a>
                 <a class="dropdown-item" href="#">
@@ -207,7 +207,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="anonDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">Anonymous</span>
-                    <img class="img-profile rounded-circle" src="${CR}/resources/img/avatar/user-solid.svg">
+                    <i class="fas fa-3x fa-user-circle" style="color:black;"></i>
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="anonDropdown">

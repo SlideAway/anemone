@@ -11,6 +11,7 @@
         <result property="userNm"   column="userNm"/>
         <result property="nickname" column="nickname"/>
         <result property="role"     column="role"/>
+        <result property="auth"   column="auth"/>
         <result property="roleNm"   column="roleNm"/>
         <result property="email"    column="email"/>
         <result property="regDate"  column="regDate"/>
@@ -31,6 +32,7 @@
                 ,a.email            as email
                 ,a.user_role        as role
                 ,b.role_nm          as roleNm
+                ,b.auth             as auth
                 ,a.user_role        as auth
                 ,a.thumb            as thumb
                 ,a.reg_date         as regDate
@@ -42,4 +44,15 @@
             and use_yn = 'Y'
         </where>
     </select>
+
+    <insert id="logUserHis" >
+        <selectKey resultType="long" keyProperty="connSeq" order="BEFORE">
+            select createseq('user_conn_his')
+        </selectKey>
+        insert into user_conn_his values(
+            #{userSeq}, #{connSeq}, #{blockYn}, to_char(now(), 'yyymmddhh24miss'),
+            '', #{blockInfo}
+                                        )
+    </insert>
+
 </mapper>

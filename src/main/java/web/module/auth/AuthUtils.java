@@ -9,7 +9,7 @@ public class AuthUtils {
 
 	public static MemberVO getUserInfo() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		if(auth == null) {
+		if(auth.getPrincipal().equals("anonymousUser")) {
 			return null;
 		}
 		return ((CustomUser)auth.getPrincipal()).getMember();
