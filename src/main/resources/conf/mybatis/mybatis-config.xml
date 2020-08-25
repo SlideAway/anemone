@@ -7,6 +7,7 @@
     </settings>
     <typeAliases>
         <package name="web.module.auth.domain"/>
+        <package name="web.module.tld.domain"/>
         <package name="web.mvc.common.domain"/>
         <package name="web.mvc.community.domain"/>
         <package name="web.mvc.movie.domain"/>

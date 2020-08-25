@@ -75,7 +75,6 @@ function doSubmit(obj) {
     var value = obj.find("#userId").val();
 
     JMLib.Ajax("userId="+value, "/CM002_ID.do", function(data) {
-        console.log(data);
         if(!data) {
             JMLib.JMalert("중복된 ID입니다. ");
             $("#userPwd").val('');

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.mvc.manage.dao.MGR003Dao">
+
+    <select id="getUserList" resultType="MGR003Dto">
+        select          a.user_seq      as      userSeq,
+                        a.user_nm       as      userNm,
+                        a.user_id       as      userId,
+                        a.reg_date      as      regDate,
+                        a.exit_date     as      exitDate,
+                        a.use_yn        as      useYn,
+                        b.role_nm       as      userRole
+        from            user_info a
+        left outer join role_info b on a.user_role = b.role_cd
+        <where>
+            <if test="userNm != null and userNm != ''">
+                a.user_nm like '%' || #{userNm} || '%'
+            </if>
+            <if test="userId != null and userId != ''">
+                a.user_id like '%' || #{userId} || '%'
+            </if>
+            <if test="userRole != null and userRole != ''">
+                a.user_role = #{userRole}
+            </if>
+            <if test="regDate != null and regDate != ''">
+                a.reg_date &gt;= #{regDate}
+            </if>
+            <if test="exitDate != null and exitDate != ''">
+                a.exit_date &gt;= #{exitDate}
+            </if>
+            <if test="useYn != null and useYn != ''">
+                a.use_yn = #{useYn}
+            </if>
+        </where>
+    </select>
+</mapper>

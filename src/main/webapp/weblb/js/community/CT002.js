@@ -1,5 +1,8 @@
 function doView(seq) {
-    location.href = getContextPath() + "/CT002_DETAIL.do?contentSeq="+seq;
+    if(seq != undefined) {
+        location.href = getContextPath() + "/CT002_DETAIL.do?contentSeq="+seq;
+    }
+
 }
 
 function goInsert() {

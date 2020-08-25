@@ -30,13 +30,9 @@ public class MN001Controller {
 			userRole = param.getUserInfo().getAuth();
 		}
 
-		List<MN001Dto> horizen = service.getHorizen(userRole);
-		List<MN001Dto> topMenu = service.getTopMenu(userRole);
-		List<MN001Dto> leafMenu = service.getLeafMenu(userRole);
-
-		model.addAttribute("horizen", horizen);
-		model.addAttribute("topMenu", topMenu);
-		model.addAttribute("leafMenu", leafMenu);
+		model.addAttribute("horizen", service.getHorizen(userRole));
+		model.addAttribute("topMenu", service.getTopMenu(userRole));
+		model.addAttribute("leafMenu", service.getLeafMenu(userRole));
 
 		return "TREEMENU";
 	}

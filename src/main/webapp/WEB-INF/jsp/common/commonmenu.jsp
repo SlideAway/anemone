@@ -31,7 +31,7 @@
                         <div class="bg-white py-2 collapse-inner rounded">
                             <c:forEach var="leafMenu" items="${leafMenu}">
                                 <c:if test="${leafMenu.parentCode eq topMenu.menuCode}">
-                                    <a class="collapse-item" href="${leafMenu.menuUrl}">
+                                    <a class="collapse-item" href="#" onclick="goTo('${leafMenu.menuUrl}')">
                                         <i class="${leafMenu.menuIcon}"></i>
                                             ${leafMenu.menuNm}
                                     </a>

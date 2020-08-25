@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.module.tld.dao.comboDao">
+    <select id="getComboList" resultType="comboDto">
+        select code     as  value,
+               code_nm  as  name
+        from code_info
+            <where>
+                basecode = #{code}
+            </where>
+    </select>
+
+    <select id="getRoleList" resultType="comboDto">
+        select  role_cd      as      value,
+                role_nm      as      name
+        from  role_info
+        <where>
+            auth &gt;= #{code}
+        </where>
+    </select>
+
+</mapper>

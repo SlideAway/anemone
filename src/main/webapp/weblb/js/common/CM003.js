@@ -17,8 +17,15 @@ function doLogin(obj) {
     // }, opt);
 }
 
-function enterKey(evt) {
-    if(evt.keyCode == 13) {
+function enterKey() {
+    if(event.keyCode === 13) {
         doLogin($("form"));
     }
+}
+
+function setError(err) {
+    if(err != undefined) {
+        JMLib.JMalert("ID 또는 패스워드가 일치하지 않습니다. ");
+    }
+
 }

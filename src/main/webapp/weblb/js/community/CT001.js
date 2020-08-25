@@ -1,8 +1,7 @@
 function doView(seq) {
-    if(seq == undefined) {
-        return false;
+    if(seq != undefined) {
+        location.href = getContextPath() + "/CT001_DETAIL.do?contentSeq=" + seq;
     }
-    location.href = getContextPath() + "/CT001_DETAIL.do?contentSeq="+seq;
 }
 function goPage(num) {
     console.log(num);
