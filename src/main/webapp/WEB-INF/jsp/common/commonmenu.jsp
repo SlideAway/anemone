@@ -14,7 +14,10 @@
     </a>
     <c:forEach var="horizen" items="${horizen}" varStatus="horiStatus">
         <c:if test="${horizen ne null}">
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                ${horizen.menuNm}
+            </div>
         </c:if>
         <c:forEach var="topMenu" items="${topMenu}" varStatus="topStatus">
             <c:if test="${topMenu.parentCode eq horizen.menuCode}">

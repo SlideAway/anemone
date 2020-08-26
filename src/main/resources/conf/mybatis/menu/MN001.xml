@@ -7,7 +7,8 @@
         select  menu_code   as  menuCode,
                 parent_code as  parentCode,
                 sort_seq    as  sortSeq,
-                menu_type   as  menuType
+                menu_type   as  menuType,
+                menu_nm     as  menuNm
         from tree_menu
         <where>
             menu_type = 'H'

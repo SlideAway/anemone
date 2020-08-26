@@ -118,3 +118,46 @@ CREATE TABLE about_me(
     skill_link    text            NOT NULL
 );
 
+--영화 테이블
+CREATE TABLE tbl_movie_info
+(
+    movie_seq       BIGINT         NOT NULL,
+    movie_code      VARCHAR(20)    NOT NULL,
+    movie_nm_origin VARCHAR(45)    NOT NULL,
+    movie_nm_kor    VARCHAR(45)    NOT NULL,
+    label           VARCHAR(45)    NOT NULL,
+    release_date    VARCHAR(14)    NOT NULL,
+    thumb_src       TEXT           NOT NULL,
+    PRIMARY KEY (movie_seq)
+);
+
+--영화 태그 테이블
+CREATE TABLE tbl_movie_tag
+(
+    movie_seq  BIGINT        NOT NULL,
+    code       VARCHAR(3)    NOT NULL,
+    PRIMARY KEY (movie_seq, code)
+);
+
+--영화 배우 정보 테이블
+CREATE TABLE tbl_actor_info
+(
+    actor_seq        BIGINT         NOT NULL,
+    actor_nm_origin  VARCHAR(45)    NOT NULL,
+    actor_nm_kor     VARCHAR(45)    NOT NULL,
+    born_date        VARCHAR(14)    NOT NULL,
+    age              INT            NOT NULL,
+    label            VARCHAR(45)    NOT NULL,
+    release_date     VARCHAR(14)    NOT NULL,
+    active_yn        VARCHAR(1)     NOT NULL,
+    thumb_src        TEXT           NOT NULL,
+    PRIMARY KEY (actor_seq)
+);
+
+--해당 영화에 출연한 배우 목록
+CREATE TABLE tbl_movie_actor
+(
+    movie_seq  BIGINT    NOT NULL,
+    actor_seq  BIGINT    NOT NULL,
+    PRIMARY KEY (movie_seq, actor_seq)
+);
