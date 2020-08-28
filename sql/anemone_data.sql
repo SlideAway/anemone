@@ -14,6 +14,10 @@ INSERT INTO seq_code VALUES(1, 0, 'user_info', to_char(now(), 'yyyymmddhh24miss'
 INSERT INTO code_info VALUES('T001', 0, 'ROOT', '게시판 타입');
 INSERT INTO code_info VALUES('T001', 1, '1', '공지사항');
 INSERT INTO code_info VALUES('T001', 2, '2', '자유게시판');
+INSERT INTO code_info VALUES('T002', 0, 'ROOT', '메뉴 타입');
+INSERT INTO code_info VALUES('T002', 1, '1', 'H');
+INSERT INTO code_info VALUES('T002', 2, '2', 'F');
+INSERT INTO code_info VALUES('T002', 3, '3', 'L');
 
 --tree_menu : 트리메뉴 정보
 INSERT INTO tree_menu VALUES('1', '0', 1, 'H', 'Admin', '', '', 1, to_char(now(), 'yyyymmddhh24miss'), 1, to_char(now(), 'yyyymmddhh24miss'), 1);

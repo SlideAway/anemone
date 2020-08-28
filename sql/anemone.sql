@@ -119,7 +119,7 @@ CREATE TABLE about_me(
 );
 
 --영화 테이블
-CREATE TABLE tbl_movie_info
+CREATE TABLE movie_info
 (
     movie_seq       BIGINT         NOT NULL,
     movie_code      VARCHAR(20)    NOT NULL,
@@ -132,7 +132,7 @@ CREATE TABLE tbl_movie_info
 );
 
 --영화 태그 테이블
-CREATE TABLE tbl_movie_tag
+CREATE TABLE movie_tag
 (
     movie_seq  BIGINT        NOT NULL,
     code       VARCHAR(3)    NOT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE tbl_movie_tag
 );
 
 --영화 배우 정보 테이블
-CREATE TABLE tbl_actor_info
+CREATE TABLE actor_info
 (
     actor_seq        BIGINT         NOT NULL,
     actor_nm_origin  VARCHAR(45)    NOT NULL,
@@ -155,7 +155,7 @@ CREATE TABLE tbl_actor_info
 );
 
 --해당 영화에 출연한 배우 목록
-CREATE TABLE tbl_movie_actor
+CREATE TABLE movie_actor
 (
     movie_seq  BIGINT    NOT NULL,
     actor_seq  BIGINT    NOT NULL,
