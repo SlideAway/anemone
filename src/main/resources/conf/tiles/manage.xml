@@ -4,28 +4,28 @@
 
 <tiles-definitions>
     <!-- MGR001 - 사이트 통계 -->
-    <definition name="MGR001" extends="DEFAULT">
+    <definition name="MGR001"           extends="DEFAULT">
         <put-attribute name="title"     value="사이트 통계"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/manage/MGR001.jsp"/>
     </definition>
 
     <!-- MGR002 - 사이트 관리 -->
-    <definition name="MGR002" extends="DEFAULT">
+    <definition name="MGR002"           extends="DEFAULT">
         <put-attribute name="title"     value="사이트 관리"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/manage/MGR002.jsp"/>
     </definition>
     <!-- MGR003 - 사용자 권한 관리 -->
-    <definition name="MGR003" extends="DEFAULT">
+    <definition name="MGR003"           extends="DEFAULT">
         <put-attribute name="title"     value="사용자 권한 관리"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/manage/MGR003.jsp"/>
     </definition>
     <!-- MGR004 - 트리메뉴 관리 -->
-    <definition name="MGR004" extends="DEFAULT">
+    <definition name="MGR004"           extends="DEFAULT">
         <put-attribute name="title"     value="트리메뉴 관리"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/manage/MGR004.jsp"/>
     </definition>
     <!-- MGR005 - 트리메뉴 관리 -->
-    <definition name="MGR005" extends="DEFAULT">
+    <definition name="MGR005"           extends="DEFAULT">
         <put-attribute name="title"     value="데이터베이스 관리"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/manage/MGR005.jsp"/>
     </definition>

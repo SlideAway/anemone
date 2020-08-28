@@ -5,13 +5,13 @@
 <tiles-definitions>
 
     <!-- ITD001 - About Me -->
-    <definition name="ITD001" extends="DEFAULT">
+    <definition name="ITD001"           extends="DEFAULT">
         <put-attribute name="title"     value="About Me"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/introduce/ITD001.jsp"/>
     </definition>
 
     <!-- ITD002 - About Site -->
-    <definition name="ITD002" extends="DEFAULT">
+    <definition name="ITD002"           extends="DEFAULT">
         <put-attribute name="title"     value="About Stie"/>
         <put-attribute name="contents"  value="/WEB-INF/jsp/introduce/ITD001.jsp"/>
     </definition>

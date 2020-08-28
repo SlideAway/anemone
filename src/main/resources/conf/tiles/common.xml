@@ -9,9 +9,12 @@
         <put-attribute name="sidebar"   value="/TREEMENU.do"/>
     </definition>
 
-    <definition name="TREEMENU" template="/WEB-INF/jsp/common/commonmenu.jsp"/>
+    <definition name="TREEMENU"         template="/WEB-INF/jsp/common/commonmenu.jsp"/>
 
-    <definition name="TOPMENU" template="/WEB-INF/jsp/common/commonTop.jsp"/>
+    <definition name="TOPMENU"          template="/WEB-INF/jsp/common/commonTop.jsp"/>
+
+    <definition name="POPUP"            template="/WEB-INF/jsp/common/layoutPopup.jsp">
+    </definition>
 
     <!-- CM001 - 메인화면 -->
     <definition name="CM001"            extends="DEFAULT">
