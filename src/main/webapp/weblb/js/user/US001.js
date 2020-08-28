@@ -1,6 +1,7 @@
-function chgPass() {
-    location.href=getContextPath() + "/US003.do";
+function chgInfo(target) {
+    location.href=getContextPath() + "/US001_CHGINFO.do?chgType="+target;
 }
-function chgInfo() {
-    location.href=getContextPath() + "/US002.do";
+
+function submitCheckPass() {
+
 }

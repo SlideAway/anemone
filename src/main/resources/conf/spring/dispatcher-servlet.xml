@@ -34,6 +34,18 @@
     </bean>
     <mvc:resources mapping="/resources/**" location="/resources/"/>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/US001_CHGINFO.do"/>
+            <bean class="web.module.interceptor.customInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/US001_CHGPASS.do"/>
+            <bean class="web.module.interceptor.customInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
         <property name="definitions">
             <list>

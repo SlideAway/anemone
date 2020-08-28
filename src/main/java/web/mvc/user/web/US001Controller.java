@@ -28,4 +28,16 @@ public class US001Controller extends getInfo{
 		return "US001";
 	}
 
+	@RequestMapping("/US001_CHGINFO.do")
+	public String chgInfo(int chgType) {
+		if(chgType == 0) return "US001CHGPASS";
+
+		return "US001CHGINFO";
+	}
+
+	@RequestMapping("/US001_CHKPASS.do")
+	public String checkPassword() {
+		return "US001CHKPASS";
+	}
+
 }

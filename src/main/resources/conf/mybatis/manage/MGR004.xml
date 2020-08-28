@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web.mvc.manage.dao.MGR004Dao">
+    <select id="getMenuInfo" resultType="MGR004Dto">
+        select
+            menu_code       as       menuCode,
+            parent_code     as       parentCode,
+            sort_seq        as       sortSeq,
+            menu_type       as       menuType,
+            menu_nm         as       menuNm,
+            menu_icon       as       menuIcon,
+            menu_url        as       menuURL
+        from tree_menu
+        <where>
+            menu_permit &gt;= #{userInfo.userSeq}
+        </where>
+        order by menu_code, sort_seq
+    </select>
+</mapper>

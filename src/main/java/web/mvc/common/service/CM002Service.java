@@ -3,7 +3,6 @@ package web.mvc.common.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import web.mvc.common.dao.CM002Dao;
-import web.mvc.common.domain.CM002Dto;
 import web.mvc.common.domain.CM002Param;
 
 public class CM002Service {

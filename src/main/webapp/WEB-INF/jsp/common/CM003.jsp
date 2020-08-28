@@ -52,13 +52,13 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="/CM003_FINDID.do">Forgot ID?</a>
+                                <a class="small" href="#" onclick="goTo('/CM003_FINDID.do')">Forgot ID?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="/CM003_FINDPASS.do">Forgot Password?</a>
+                                <a class="small" href="#" onclick="goTo('/CM003_FINDPASS.do')">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="/CM002.do">Create an Account!</a>
+                                <a class="small" href="#" onclick="goTo('/CM002.do');">Create an Account!</a>
                             </div>
                         </div>
                     </div>

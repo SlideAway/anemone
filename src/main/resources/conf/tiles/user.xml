@@ -4,9 +4,27 @@
 
 <tiles-definitions>
     <!-- US001 - 마이페이지 -->
-    <definition name="US001"            extends="DEFAULT">
-        <put-attribute name="title"     value="마이페이지"/>
-        <put-attribute name="contents"  value="/WEB-INF/jsp/user/US001.jsp"/>
+    <definition         name="US001"     extends="DEFAULT">
+        <put-attribute  name="title"     value="마이페이지"/>
+        <put-attribute  name="contents"  value="/WEB-INF/jsp/user/US001.jsp"/>
+    </definition>
+
+    <!-- US001CHGPASS - 패스워드 변경 -->
+    <definition name="US001CHGPASS"     extends="DEFAULT">
+        <put-attribute name="title"     value="비밀번호 변경"/>
+        <put-attribute name="contents"  value="/WEB-INF/jsp/user/US001ChgPass.jsp"/>
+    </definition>
+
+    <!-- US001CHGPASS - 개인정보 변경 -->
+    <definition name="US001CHGINFO"     extends="DEFAULT">
+        <put-attribute name="title"     value="개인정보 변경"/>
+        <put-attribute name="contents"  value="/WEB-INF/jsp/user/US001ChgInfo.jsp"/>
+    </definition>
+
+    <!-- US001CHKPASS - 비밀번호 재확인 -->
+    <definition name="US001CHKPASS"     extends="DEFAULT">
+        <put-attribute name="title"     value="비밀번호 재확인"/>
+        <put-attribute name="contents"  value="/WEB-INF/jsp/user/US001ChkPass.jsp"/>
     </definition>
 
     <!-- US002 - 사용자 정보 수정 -->
@@ -16,7 +34,7 @@
     </definition>
 
     <!--US003 - 사용자 환경설정 -->
-    <definition name="US002_CHANGE"         extends="DEFAULT">
+    <definition name="US002CHANGE"         extends="DEFAULT">
         <put-attribute name="title"         value="정보 수정"/>
         <put-attribute name="contents"      value="/WEB-INF/jsp/user/US002chg.jsp"/>
     </definition>

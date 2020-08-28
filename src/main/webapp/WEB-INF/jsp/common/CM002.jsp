@@ -44,7 +44,7 @@
                     </form>
                     <hr>
                     <div class="text-center">
-                        <a class="small" href="/CM003.do">Already have an account? Login!</a>
+                        <a class="small" href="#" onclick="goTo('/CM003.do');">Already have an account? Login!</a>
                     </div>
                 </div>
             </div>

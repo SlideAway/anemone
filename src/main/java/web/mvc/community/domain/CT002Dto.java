@@ -2,7 +2,6 @@ package web.mvc.community.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import net.sf.json.JSONSerializer;
 
 public class CT002Dto {
 	private long contentSeq;

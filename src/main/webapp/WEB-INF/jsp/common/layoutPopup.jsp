@@ -10,23 +10,15 @@
     <script src="${CR}/resources/jquery3.4.1/jquery-3.4.1.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body id="page-top" class="sidebar-toggled">
-<div id="wrapper">
-    <tiles:insertAttribute name="sidebar"></tiles:insertAttribute>
-    <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
-            <tiles:insertAttribute name="top"/>
-            <section class="content-header" style="padding: 10px;">
-                <h1 class="h3 mb-4 text-gray-800"><tiles:insertAttribute name="title"/></h1>
-                <div class="card-body">
-                    <section class="content" style="padding: 10px;">
-                        <tiles:insertAttribute name="contents"/>
-                    </section>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
+
+<body id="page-top">
+
+
+
+
+
+
+</body>
 
 <!-- Bootstrap core JavaScript-->
 <!--<script src="${CR}/resources/startbootstrap/vendor/jquery/jquery.min.js"></script>-->
@@ -42,6 +34,3 @@
 <!-- Page level plugins -->
 <script src="${CR}/resources/startbootstrap/vendor/chart.js/Chart.min.js"></script>
 
-
-</body>
-</html>

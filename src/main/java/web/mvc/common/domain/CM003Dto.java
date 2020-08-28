@@ -2,7 +2,6 @@ package web.mvc.common.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import web.module.auth.domain.CustomUser;
 import web.module.auth.domain.MemberVO;
 
 import java.util.Date;

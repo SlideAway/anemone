@@ -7,7 +7,6 @@ public class CM002Dto {
     private long    userSeq;
     private String  userNm;
     private String  userId;
-    private String  encPwd;
     private String  userPwd;
     private String  nickName;
     private String  userRole;
@@ -39,14 +38,6 @@ public class CM002Dto {
         this.userId = userId;
     }
 
-    public String getEncPwd() {
-        return encPwd;
-    }
-
-    public void setEncPwd(String encPwd) {
-        this.encPwd = encPwd;
-    }
-
     public String getNickName() {
         return nickName;
     }
@@ -69,5 +60,13 @@ public class CM002Dto {
 
     public void setUserRole(String userRole) {
         this.userRole = userRole;
+    }
+
+    public String getUserPwd() {
+        return userPwd;
+    }
+
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
     }
 }
