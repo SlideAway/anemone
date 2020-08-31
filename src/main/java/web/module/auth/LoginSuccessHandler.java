@@ -8,6 +8,7 @@ import web.module.auth.dao.MemberMapper;
 import web.module.auth.domain.CustomUser;
 import web.module.auth.domain.MemberVO;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,26 +17,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
-	private MemberMapper dao;
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication auth) throws IOException, ServletException {
 		List<String> roleNames = new ArrayList<>();
 		auth.getAuthorities().forEach(authority -> {
 			roleNames.add(authority.getAuthority());
 		});
-//		Object obj = auth.getDetails();
-//		MemberVO member = ((CustomUser)auth.getPrincipal()).getMember();
-
-		//		member.setIpAddr(obj.getRemoteAddress());
-//		member.setBlockYn("N");
-//		dao.logUserHis(member);
 
 
 		if(roleNames.contains("0") || roleNames.contains("1")) {
-			response.sendRedirect("/US001.do");
+			RequestDispatcher rd = request.getRequestDispatcher("/US001.do");
+			rd.forward(request, response);
+			//response.sendRedirect("/US001.do");
 		}
 		if(roleNames.contains("99")) {
-			response.sendRedirect("/US001.do");
+			RequestDispatcher rd = request.getRequestDispatcher("/US001.do");
+			rd.forward(request, response);
+			//response.sendRedirect("/US001.do");
 		}
 	}
 }

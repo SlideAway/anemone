@@ -12,6 +12,6 @@ public class AuthUtils {
 		if(auth.getPrincipal().equals("anonymousUser")) {
 			return null;
 		}
-		return ((CustomUser)auth.getPrincipal()).getMember();
+		return (MemberVO)auth.getPrincipal();
 	}
 }

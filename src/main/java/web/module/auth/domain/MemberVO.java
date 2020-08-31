@@ -4,9 +4,11 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -137,6 +139,11 @@ public class MemberVO implements UserDetails {
 
 	public void setRole(String role) {
 		this.role = role;
+		authorities = new ArrayList<GrantedAuthority>();
+		String[] roles = role.split(", ");
+		for(String userRole : roles) {
+			authorities.add(new SimpleGrantedAuthority(userRole));
+		}
 	}
 
 	public String getThumb() {
