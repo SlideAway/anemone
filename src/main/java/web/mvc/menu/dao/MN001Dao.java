@@ -1,6 +1,5 @@
 package web.mvc.menu.dao;
 
-import com.sun.org.glassfish.gmbal.ParameterNames;
 import org.apache.ibatis.annotations.Param;
 import web.mvc.menu.domain.MN001Dto;
 
