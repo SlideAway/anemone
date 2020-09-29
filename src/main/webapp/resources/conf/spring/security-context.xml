@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security.xsd
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <security:http auto-config="true" use-expressions="true">
+        <security:intercept-url pattern="/MGR*.do"          access="hasAnyAuthority('0', '1')" />
+        <security:intercept-url pattern="/CT001_INS.do"     access="hasAnyAuthority('0', '1')" />
+
+        <security:intercept-url pattern="/US*.do"           access="isAuthenticated()"/>
+
+        <security:intercept-url pattern="/CM002.do"         access="isAnonymous()"/>
+        <security:intercept-url pattern="/CM003.do"         access="isAnonymous()"/>
+        <security:csrf disabled="true"/>
+        <security:form-login login-page="/CM003.do"
+                             authentication-success-handler-ref="customLoginSuccess"
+                             authentication-failure-handler-ref="customLoginFailure"
+                             login-processing-url="/CM003_LOGIN.do"
+                             username-parameter="userId"
+                             password-parameter="userPwd"/>
+
+
+        <security:access-denied-handler ref="customLoginDeny"/>
+
+        <security:logout logout-url="/CM003_LOGOUT.do"
+                         invalidate-session="false"
+                         success-handler-ref="customLogout"/>
+    </security:http>
+    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="userService">
+            <security:password-encoder ref="passwordEncoder"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="customLoginFailure" class="web.module.auth.LoginFailureHandler"></bean>
+    <bean id="userService" class="web.mvc.common.service.CM003Service"></bean>
+    <bean id="passwordEncoder" class="web.module.auth.passwordEncoder"></bean>
+    <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+    <bean id="customLoginSuccess" class="web.module.auth.LoginSuccessHandler"></bean>
+    <bean id="customLoginDeny" class="web.module.auth.LoginDenyHandler"></bean>
+    <bean id="customLogout" class="web.module.auth.LogoutHandler"></bean>
+</beans>

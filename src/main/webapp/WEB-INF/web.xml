@@ -6,8 +6,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            /conf/spring/applicationContext.xml
-            /conf/spring/security-context.xml
+            /resources/conf/spring/applicationContext.xml
+            /resources/conf/spring/security-context.xml
         </param-value>
     </context-param>
     <context-param>
