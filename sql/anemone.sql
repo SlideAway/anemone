@@ -146,8 +146,6 @@ CREATE TABLE actor_info
     actor_nm_origin  VARCHAR(45)    NOT NULL,
     actor_nm_kor     VARCHAR(45)    NOT NULL,
     born_date        VARCHAR(14)    NOT NULL,
-    age              INT            NOT NULL,
-    label            VARCHAR(45)    NOT NULL,
     release_date     VARCHAR(14)    NOT NULL,
     active_yn        VARCHAR(1)     NOT NULL,
     thumb_src        TEXT           NOT NULL,
